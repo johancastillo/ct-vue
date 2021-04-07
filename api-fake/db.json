@@ -1,0 +1,111 @@
+{
+  "oferts": [
+    {
+      "id": 1,
+      "title": "Vino espumante Prosecco la Marca",
+      "price": 100,
+      "price_ofert": 45,
+      "ofert_special": true,
+      "discount": 20,
+      "image": "https://d13lnhwm7sh4hi.cloudfront.net/wp-content/uploads/2019/10/21173833/085000017739_01-300x300.jpg",
+      "in_stock": 10,
+      "initial_amount": 20,
+      "already_sold": 10,
+      "date_limit": "Feb 14 2021 12:45:41 GMT-0400"
+    },
+    {
+      "id": 2,
+      "title": "Licuadora",
+      "price": 85,
+      "price_ofert": 45,
+      "discount": 20,
+      "image": "https://d13lnhwm7sh4hi.cloudfront.net/wp-content/uploads/2019/10/21173833/085000017739_01-300x300.jpg",
+      "in_stock": 10,
+      "initial_amount": 14,
+      "already_sold": 4,
+      "date_limit": "Feb 10 2021 15:45:41 GMT-0400"
+    },
+    {
+      "id": 3,
+      "title": "PlayStation 4",
+      "price": 85,
+      "price_ofert": 45,
+      "discount": 20,
+      "image": "https://d13lnhwm7sh4hi.cloudfront.net/wp-content/uploads/2019/10/21173833/085000017739_01-300x300.jpg",
+      "in_stock": 10,
+      "initial_amount": 14,
+      "already_sold": 4,
+      "date_limit": "Feb 10 2021 15:45:41 GMT-0400"
+    }
+  ],
+
+  "products": [
+    {
+      "title": "",
+      "image": "",
+      "description": "",
+      "stars": 4.5,
+      "price": 30,
+      "in_stock": 4
+    }
+  ],
+
+  "for_you": [
+    {
+      "id": 1,
+      "title": "3 pack Ron Añejo Cacique",
+      "image": "",
+      "description": "",
+      "stars": 4.5,
+      "price": 30,
+      "in_stock": 4
+    },
+    {
+      "id": 2,
+      "title": "",
+      "image": "",
+      "description": "",
+      "stars": 4.5,
+      "price": 30,
+      "in_stock": 4
+    },
+    {
+      "id": 3,
+      "title": "",
+      "image": "",
+      "description": "",
+      "stars": 4.5,
+      "price": 30,
+      "in_stock": 4
+    },
+    {
+      "id": 4,
+      "title": "",
+      "image": "",
+      "description": "",
+      "stars": 4.5,
+      "price": 30,
+      "in_stock": 4
+    },
+    {
+      "id": 5,
+      "title": "",
+      "image": "",
+      "description": "",
+      "stars": 4.5,
+      "price": 30,
+      "in_stock": 4
+    }
+  ],
+  "audio": [
+    {
+      "id": 1,
+      "title": "",
+      "image": "",
+      "description": "",
+      "stars": 4.5,
+      "price": 30,
+      "in_stock": 4
+    }
+  ]
+}
