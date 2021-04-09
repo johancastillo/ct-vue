@@ -141,8 +141,10 @@ Vue.component('Ads', {
                         <div class="col-md-6 mb-4 mb-xl-0">
                             <a href="../shop/shop.html" class="d-black text-gray-90">
                                 <div class="min-height-132 py-1 d-flex bg-gray-1 align-items-center">
-                                    <div class="col-6 col-xl-5 col-wd-6 pr-0">
-                                        <img class="img-fluid" src="../../assets/img/190X150/img1.png"
+                                    <div class="col-6 col-xl-5 col-wd-6 pr-0 d-flex justify-content-center align-items-center">
+                                        <img class="img-fluid" 
+                                            width="100px"
+                                            src="../../assets/img/ads/01.png"
                                             alt="Image Description">
                                     </div>
                                     <div class="col-6 col-xl-7 col-wd-6">
@@ -164,8 +166,10 @@ Vue.component('Ads', {
                         <div class="col-md-6 mb-4 mb-xl-0">
                             <a href="../shop/shop.html" class="d-black text-gray-90">
                                 <div class="min-height-132 py-1 d-flex bg-gray-1 align-items-center">
-                                    <div class="col-6 col-xl-5 col-wd-6 pr-0">
-                                        <img class="img-fluid" src="../../assets/img/190X150/img2.jpg"
+                                    <div class="col-6 col-xl-5 col-wd-6 pr-0 d-flex justify-content-center align-items-center">
+                                        <img class="img-fluid" 
+                                            width="70px"
+                                            src="../../assets/img/ads/02.png"
                                             alt="Image Description">
                                     </div>
                                     <div class="col-6 col-xl-7 col-wd-6">
@@ -1609,7 +1613,7 @@ Vue.component('full-banner', {
   template: `
   <div class="mb-6">
       <a href="../shop/shop.html" class="d-block text-gray-90">
-          <div class="" style="background-image: url(../../assets/img/1400X206/img1.jpg);">
+          <div class="" style="background-image: url(../../assets/img/full-banner/01.png);">
               <div class="space-top-2-md p-4 pt-6 pt-md-8 pt-lg-6 pt-xl-8 pb-lg-4 px-xl-8 px-lg-6">
                   <div class="flex-horizontal-center mt-lg-3 mt-xl-0 overflow-auto overflow-md-visble">
                       <h1
@@ -8954,9 +8958,11 @@ Vue.component('Tab', {
                                     </div>
                                     <div class="flex-center-between mb-1">
                                         <div class="prodcut-price">
-                                            <div class="text-gray-100">
+
+                                            <div v-if="money == 'bolivares'" class="text-gray-100">
                                                 {{ product.price + ".00$" }}
                                             </div>
+                                        
                                         </div>
                                         <div class="d-none d-xl-block prodcut-add-cart">
                                             <a href="../shop/single-product-fullwidth.html"
@@ -9004,6 +9010,7 @@ let app = new Vue({
     data: {
       message: 'Hello Vue!',
       device: screen.width,
+      money: 'bolivares',
       slider: {
         imagesMobile: [
           {id: 1, image:'https://d13lnhwm7sh4hi.cloudfront.net/wp-content/uploads/2021/01/08140919/banner2tarjetaefectivo767X767.png', description:"Image One"},
