@@ -398,42 +398,69 @@ Vue.component('brands-carousel', {
                                     "slidesToShow": 1
                                 }
                             }]'>
+
                             <div class="js-slide">
                                 <a href="#" class="link-hover__brand">
-                                    <img class="img-fluid m-auto max-height-50" src="../../assets/img/200X60/img1.png"
+                                    <img class="img-fluid m-auto max-height-50" 
+                                        src="../../assets/img/brands/alimentos-polar.png"
                                         alt="Image Description">
                                 </a>
                             </div>
                             <div class="js-slide">
                                 <a href="#" class="link-hover__brand">
-                                    <img class="img-fluid m-auto max-height-50" src="../../assets/img/200X60/img2.png"
+                                    <img class="img-fluid m-auto max-height-50" 
+                                        src="../../assets/img/brands/android.png"
                                         alt="Image Description">
                                 </a>
                             </div>
                             <div class="js-slide">
                                 <a href="#" class="link-hover__brand">
-                                    <img class="img-fluid m-auto max-height-50" src="../../assets/img/200X60/img3.png"
+                                    <img class="img-fluid m-auto max-height-50" 
+                                        src="../../assets/img/brands/hyundai.png"
                                         alt="Image Description">
                                 </a>
                             </div>
+
                             <div class="js-slide">
                                 <a href="#" class="link-hover__brand">
-                                    <img class="img-fluid m-auto max-height-50" src="../../assets/img/200X60/img4.png"
+                                    <img class="img-fluid m-auto max-height-50" 
+                                        src="../../assets/img/brands/intel.png"
                                         alt="Image Description">
                                 </a>
                             </div>
+
                             <div class="js-slide">
                                 <a href="#" class="link-hover__brand">
-                                    <img class="img-fluid m-auto max-height-50" src="../../assets/img/200X60/img5.png"
+                                    <img class="img-fluid m-auto max-height-50" 
+                                        src="../../assets/img/brands/lenovo.png"
                                         alt="Image Description">
                                 </a>
                             </div>
+
                             <div class="js-slide">
                                 <a href="#" class="link-hover__brand">
-                                    <img class="img-fluid m-auto max-height-50" src="../../assets/img/200X60/img6.png"
+                                    <img class="img-fluid m-auto max-height-50" 
+                                        src="../../assets/img/brands/lg.png"
                                         alt="Image Description">
                                 </a>
                             </div>
+
+                            <div class="js-slide">
+                                <a href="#" class="link-hover__brand">
+                                    <img class="img-fluid m-auto max-height-50" 
+                                        src="../../assets/img/brands/ottima.png"
+                                        alt="Image Description">
+                                </a>
+                            </div>
+
+                            <div class="js-slide">
+                                <a href="#" class="link-hover__brand">
+                                    <img class="img-fluid m-auto max-height-50" 
+                                        src="../../assets/img/brands/samsung.png"
+                                        alt="Image Description">
+                                </a>
+                            </div>
+                        
                         </div>
                     </div>
                 </div>
@@ -8955,7 +8982,7 @@ Vue.component('Tab', {
                         </div>
 
                     </li>
-                    
+
                 </ul>
             </div>
         </div>
