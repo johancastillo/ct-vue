@@ -44,7 +44,7 @@
     <div id="app">
 
         <!-- Money -->
-        <div class="money usa">
+        <div v-on:click="money = 'dollars'" class="money usa">
             <div class="flag">
                 <img src="./assets/img/flags/Bandera-USA-11.png" alt="">
             </div>
@@ -52,7 +52,7 @@
             <div class="symbol">$</div>
         </div>
 
-        <div class="money vnzla">
+        <div v-on:click="money = 'bolivares'" class="money vnzla">
             <div class="flag">
                 <img src="./assets/img/flags/Bandera-Vzla.png" alt="">
             </div>
