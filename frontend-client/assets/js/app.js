@@ -143,14 +143,15 @@ Vue.component('Ads', {
                                 <div class="min-height-132 py-1 d-flex bg-gray-1 align-items-center">
                                     <div class="col-6 col-xl-5 col-wd-6 pr-0 d-flex justify-content-center align-items-center">
                                         <img class="img-fluid" 
-                                            width="100px"
-                                            src="../../assets/img/ads/01.png"
+                                            width="70%"
+                                            src="https://d13lnhwm7sh4hi.cloudfront.net/wp-content/uploads/2020/12/09170049/boton-tarjeta-efectivo.png"
                                             alt="Image Description">
                                     </div>
                                     <div class="col-6 col-xl-7 col-wd-6">
                                         <div class="mb-2 pb-1 font-size-18 font-weight-light text-ls-n1 text-lh-23">
                                             CATCH BIG <strong>DEALS</strong> ON THE CAMERAS
                                         </div>
+                                        
                                         <div class="link text-gray-90 font-weight-bold font-size-15" href="#">
                                             Shop now
                                             <span class="link__icon ml-1">
@@ -168,8 +169,8 @@ Vue.component('Ads', {
                                 <div class="min-height-132 py-1 d-flex bg-gray-1 align-items-center">
                                     <div class="col-6 col-xl-5 col-wd-6 pr-0 d-flex justify-content-center align-items-center">
                                         <img class="img-fluid" 
-                                            width="70px"
-                                            src="../../assets/img/ads/02.png"
+                                            width="70%"
+                                            src="https://d13lnhwm7sh4hi.cloudfront.net/wp-content/uploads/2020/12/09170049/boton-tarjeta-efectivo.png"
                                             alt="Image Description">
                                     </div>
                                     <div class="col-6 col-xl-7 col-wd-6">
