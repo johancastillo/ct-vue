@@ -13,19 +13,19 @@ const AppRoutes = () => {
       <nav>
         <ul>
           <li>
-            <a href="">
+            <a>
               <Link to="/">Home</Link>
             </a>
           </li>
 
           <li>
-            <a href="">
+            <a>
               <Link to="/nosotros">About</Link>
             </a>
           </li>
 
           <li>
-            <a href="">
+            <a>
               <Link to="/mi-cuenta">My Count</Link>
             </a>
           </li>

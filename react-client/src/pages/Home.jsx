@@ -1,9 +1,17 @@
+import Header from "../components/Header"
+import Slider from "../components/Slider"
 
 
 const Home = () => {
     return(
         <div>
-            Home Component
+            <Header />
+
+            <main id="content" role="main">
+                <Slider device="600" />
+
+
+            </main>
         </div>
     )
 }
