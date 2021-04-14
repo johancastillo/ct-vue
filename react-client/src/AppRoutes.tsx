@@ -37,6 +37,7 @@ const AppRoutes = () => {
         <Route path="/" component={Home} />
         <Route path="/nosotros" component={AboutUs} />
         <Route path="/mi-cuenta" component={MyCount} />
+        <Route path="/producto" component={MyCount} />
       </Switch>
 
     </Router>

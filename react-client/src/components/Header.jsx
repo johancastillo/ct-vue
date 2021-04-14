@@ -183,31 +183,79 @@ const Header = () => {
                                                                     </div>
                                                                 </li>
                                                                 {/* End Movies, Music & Video */}
+                                                                
                                                                 {/* TV & Audio */}
                                                                 <li className="u-has-submenu u-header-collapse__submenu">
                                                                     <a className="u-header-collapse__nav-link u-header-collapse__nav-pointer" href="javascript:;" data-target="#headerSidebarTvCollapse" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="headerSidebarTvCollapse">
                                                                         TV &amp; Audio
-                                  </a>
+                                                                    </a>
                                                                     <div id="headerSidebarTvCollapse" className="collapse" data-parent="#headerSidebarContent">
                                                                         <ul className="u-header-collapse__nav-list">
-                                                                            <li><span className="u-header-sidebar__sub-menu-title">Audio
-                                          &amp; Video</span></li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">All Audio &amp; Video</a></li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">Televisions</a></li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">Headphones</a></li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">Speakers</a></li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">Audio &amp; Video Accessories</a>
+                                                                            <li>
+                                                                                <span className="u-header-sidebar__sub-menu-title">
+                                                                                    Audio &amp; Video
+                                                                                </span>
                                                                             </li>
-                                                                            <li><span className="u-header-sidebar__sub-menu-title">Music</span>
+                                                                            
+                                                                            <li>
+                                                                                <a className="u-header-collapse__submenu-nav-link" href="#">
+                                                                                    All Audio &amp; Video
+                                                                                </a>
                                                                             </li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">Televisions</a></li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">Headphones</a></li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">Electro Home Appliances</a>
+
+                                                                            <li>
+                                                                                <a className="u-header-collapse__submenu-nav-link" href="#">
+                                                                                    Televisions
+                                                                                </a>
                                                                             </li>
+
+                                                                            <li>
+                                                                                <a className="u-header-collapse__submenu-nav-link" href="#">
+                                                                                    Headphones
+                                                                                </a>
+                                                                            </li>
+
+                                                                            <li>
+                                                                                <a className="u-header-collapse__submenu-nav-link" href="#">
+                                                                                    Speakers
+                                                                                </a>
+                                                                            </li>
+
+                                                                            <li>
+                                                                                <a className="u-header-collapse__submenu-nav-link" href="#">
+                                                                                    Audio &amp; Video Accessories
+                                                                                </a>
+                                                                            </li>
+
+                                                                            <li>
+                                                                                <span className="u-header-sidebar__sub-menu-title">
+                                                                                    Music
+                                                                                </span>
+                                                                            </li>
+
+                                                                            <li>
+                                                                                <a className="u-header-collapse__submenu-nav-link" href="#">
+                                                                                    Televisions
+                                                                                </a>
+                                                                            </li>
+
+                                                                            <li>
+                                                                                <a className="u-header-collapse__submenu-nav-link" href="#">
+                                                                                    Headphones
+                                                                                </a>
+                                                                            </li>
+
+                                                                            <li>
+                                                                                <a className="u-header-collapse__submenu-nav-link" href="#">
+                                                                                    Electro Home Appliances
+                                                                                </a>
+                                                                            </li>
+
                                                                         </ul>
                                                                     </div>
                                                                 </li>
                                                                 {/* End TV & Audio */}
+                                                                
                                                                 {/* Watches & Eyewear */}
                                                                 <li className="u-has-submenu u-header-collapse__submenu">
                                                                     <a className="u-header-collapse__nav-link u-header-collapse__nav-pointer" href="javascript:;" data-target="#headerSidebarWatchesCollapse" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="headerSidebarWatchesCollapse">
@@ -344,7 +392,11 @@ const Header = () => {
                                                     <form className="js-focus-state input-group px-3">
                                                         <input className="form-control" type="search" placeholder="Buscar..." />
                                                         <div className="input-group-append">
-                                                            <button className="btn btn-primary px-3" type="button"><i className="font-size-18 ec ec-search" /></button>
+                                                            
+                                                            <button className="btn btn-primary px-3" type="button">
+                                                                <i className="font-size-18 ec ec-search" />
+                                                            </button>
+
                                                         </div>
                                                     </form>
                                                 </div>
@@ -366,19 +418,28 @@ const Header = () => {
                                                     <i className="font-size-22 ec ec-user" />
                                                 </a>
                                             </li>
+
                                             <li className="col pr-xl-0 px-2 px-sm-3 d-xl-none">
                                                 <a href="../shop/cart.html" className="text-gray-90 position-relative d-flex " data-toggle="tooltip" data-placement="top" title="Cart">
                                                     <i className="font-size-22 ec ec-shopping-bag" />
+                                                    
                                                     <span className="bg-lg-down-black width-22 height-22 bg-primary position-absolute d-flex align-items-center justify-content-center rounded-circle left-12 top-8 font-weight-bold font-size-12">2</span>
-                                                    <span className="d-none d-xl-block font-weight-bold font-size-16 text-gray-90 ml-3">$1785.00</span>
+                                                    
+                                                    <span className="d-none d-xl-block font-weight-bold font-size-16 text-gray-90 ml-3">
+                                                        00.00$
+                                                    </span>
                                                 </a>
                                             </li>
+                                            
                                             <li className="col pr-xl-0 px-2 px-sm-3 d-none d-xl-block">
                                                 <div id="basicDropdownHoverInvoker" className="text-gray-90 position-relative d-flex " data-toggle="tooltip" data-placement="top" title="Cart" aria-controls="basicDropdownHover" aria-haspopup="true" aria-expanded="false" data-unfold-event="click" data-unfold-target="#basicDropdownHover" data-unfold-type="css-animation" data-unfold-duration={300} data-unfold-delay={300} data-unfold-hide-on-scroll="true" data-unfold-animation-in="slideInUp" data-unfold-animation-out="fadeOut">
                                                     <i className="font-size-22 ec ec-shopping-bag" />
                                                     <span className="bg-lg-down-black width-22 height-22 bg-primary position-absolute d-flex align-items-center justify-content-center rounded-circle left-12 top-8 font-weight-bold font-size-12">2</span>
-                                                    <span className="d-none d-xl-block font-weight-bold font-size-16 text-gray-90 ml-3">$1785.00</span>
+                                                    <span className="d-none d-xl-block font-weight-bold font-size-16 text-gray-90 ml-3">
+                                                        00.00$
+                                                    </span>
                                                 </div>
+                                                
                                                 <div id="basicDropdownHover" className="cart-dropdown dropdown-menu dropdown-unfold border-top border-top-primary mt-3 border-width-2 border-left-0 border-right-0 border-bottom-0 left-auto right-0" aria-labelledby="basicDropdownHoverInvoker">
                                                     <ul className="list-unstyled px-3 pt-3">
                                                         <li className="border-bottom pb-3 mb-3">

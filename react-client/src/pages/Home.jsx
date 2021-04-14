@@ -1,5 +1,10 @@
+import { useEffect } from 'react'
+import $ from 'jquery'
+// Components
 import Ads from "../components/Ads"
 import CarouselProducts from "../components/CarouselProducts"
+import Footer from "../components/Footer"
+import FullBanner from "../components/FullBanner"
 import Header from "../components/Header"
 import Slider from "../components/Slider"
 import TabProducts from '../components/TabProducts'
@@ -31,6 +36,11 @@ const products = {
 
 
 const Home = () => {
+
+    useEffect(() => {
+        
+    }, [])
+
     return (
         <div>
             <TopBar />
@@ -69,12 +79,14 @@ const Home = () => {
                     </div>
                     {/* <!-- End Deals-and-tabs --> */}
 
+                    <FullBanner />
 
                     <CarouselProducts 
                         category="Tecnología"
                         products={products.populars}
                     />
 
+                    <FullBanner />
 
                     <CarouselProducts 
                         category="Tecnología"
@@ -82,6 +94,8 @@ const Home = () => {
                     />
 
                 </div>
+
+                <Footer />
 
 
                 

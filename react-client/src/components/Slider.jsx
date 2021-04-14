@@ -22,7 +22,7 @@ const Slider = () => {
     }, [])
 
     return (
-        <>
+        <div className="">
             <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
 
                 {
@@ -72,7 +72,7 @@ const Slider = () => {
                 </button>
 
             </div>
-        </>
+        </div>
     )
 }
 
