@@ -1,6 +1,9 @@
+import Ads from "../components/Ads"
+import CarouselProducts from "../components/CarouselProducts"
 import Header from "../components/Header"
 import Slider from "../components/Slider"
 import TabProducts from '../components/TabProducts'
+import TopBar from "../components/TopBar"
 
 const products = {
     populars: [
@@ -30,16 +33,21 @@ const products = {
 const Home = () => {
     return (
         <div>
+            <TopBar />
             <Header />
 
             <main id="content" role="main">
                 <Slider device="600" />
+                
+                <br/>
+                <br/>
 
                 <div className="container">
 
                     {/* <!-- Banner --> */}
+                    
 
-                    {/* <Ads></Ads> */}
+                    <Ads />
 
                     {/* <!-- End Banner --> */}
 
@@ -60,9 +68,23 @@ const Home = () => {
                         </div>
                     </div>
                     {/* <!-- End Deals-and-tabs --> */}
+
+
+                    <CarouselProducts 
+                        category="Tecnología"
+                        products={products.populars}
+                    />
+
+
+                    <CarouselProducts 
+                        category="Tecnología"
+                        products={products.populars}
+                    />
+
                 </div>
 
 
+                
 
             </main>
         </div>

@@ -16,25 +16,27 @@ const TabProducts = ({ data }) => {
                                     aria-selected="true">
                                     <div className="d-md-flex justify-content-md-center align-items-md-center">
                                         Populares
-                        </div>
+                                    </div>
                                 </a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link " id="pills-two-example1-tab" data-toggle="pill"
                                     href="#pills-two-example1" role="tab" aria-controls="pills-two-example1"
                                     aria-selected="false">
+                                    
                                     <div className="d-md-flex justify-content-md-center align-items-md-center">
                                         Más vendidos
-                        </div>
+                                    </div>
                                 </a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link " id="pills-three-example1-tab" data-toggle="pill"
                                     href="#pills-three-example1" role="tab"
                                     aria-controls="pills-three-example1" aria-selected="false">
+                                    
                                     <div className="d-md-flex justify-content-md-center align-items-md-center">
                                         Recientes
-                        </div>
+                                    </div>
                                 </a>
                             </li>
                         </ul>
