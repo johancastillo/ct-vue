@@ -58,7 +58,9 @@ const SingleProductBody = () => {
           <div className="col-md-7 mb-md-6 mb-lg-0">
             <div className="mb-2">
               <div className="border-bottom mb-3 pb-md-1 pb-3">
-                <a href="#" className="font-size-12 text-gray-5 mb-2 d-inline-block">Headphones</a>
+                <a href="#" className="font-size-12 text-gray-5 mb-2 d-inline-block">
+                  Headphones
+                </a>
                 
                 <h2 className="font-size-25 text-lh-1dot2">
                   Ultra Wireless S50 Headphones S50 with Bluetooth
@@ -74,21 +76,28 @@ const SingleProductBody = () => {
                       <small className="far fa-star text-muted" />
                     </div>
                     
-                    <span className="text-secondary font-size-13">(3 customer reviews)</span>
+                      <span className="text-secondary font-size-13">
+                        (3 customer reviews)
+                      </span>
                   </a>
                 </div>
+
                 <div className="d-md-flex align-items-center">
                   <a href="#" className="max-width-150 ml-n2 mb-2 mb-md-0 d-block"><img className="img-fluid" src="../../assets/img/200X60/img1.png" alt="Image Description" /></a>
                   
                   <div className="ml-md-3 text-gray-9 font-size-14">
-                    Availability: <span className="text-green font-weight-bold">26 in stock</span>
+                    Disponible: <span className="text-green font-weight-bold">26 en stock</span>
                   </div>
                 </div>
               </div>
               <div className="flex-horizontal-center flex-wrap mb-4">
-                <a href="#" className="text-gray-6 font-size-13 mr-2"><i className="ec ec-favorites mr-1 font-size-15" /> Wishlist</a>
-                <a href="#" className="text-gray-6 font-size-13 ml-2"><i className="ec ec-compare mr-1 font-size-15" /> Compare</a>
+                <a href="#" className="text-gray-6 font-size-13 mr-2"><i className="ec ec-favorites mr-1 font-size-15" /> 
+                    Agregar a favoritos
+                  </a>
+                
+                
               </div>
+              
               <div className="mb-2">
                 <ul className="font-size-14 pl-3 ml-1 text-gray-110">
                   <li>4.5 inch HD Touch Screen (1280 x 720)</li>
@@ -97,14 +106,20 @@ const SingleProductBody = () => {
                   <li>20 MP Electro and 28 megapixel CMOS rear camera</li>
                 </ul>
               </div>
+
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+              
               <p><strong>SKU</strong>: FW511948218</p>
+              
               <div className="mb-4">
                 <div className="d-flex align-items-baseline">
-                  <ins className="font-size-36 text-decoration-none">$1,999.00</ins>
+                    <ins className="font-size-36 text-decoration-none">
+                      $1,999.00
+                    </ins>
                   <del className="font-size-20 ml-2 text-gray-6">$2,299.00</del>
                 </div>
               </div>
+              
               <div className="border-top border-bottom py-3 mb-4">
                 <div className="d-flex align-items-center">
                   <h6 className="font-size-14 mb-0">Color</h6>
