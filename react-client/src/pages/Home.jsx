@@ -9,6 +9,8 @@ import Header from "../components/Header"
 import Slider from "../components/Slider"
 import TabProducts from '../components/TabProducts'
 import TopBar from "../components/TopBar"
+import BrandsCarousel from '../components/BrandsCarousel'
+import GoToTop from '../components/GoToTop'
 
 const products = {
     populars: [
@@ -42,9 +44,8 @@ const Home = () => {
     }, [])
 
     return (
-        <div>
-            <TopBar />
-            <Header />
+        <>
+            
 
             <main id="content" role="main">
                 <Slider device="600" />
@@ -93,15 +94,35 @@ const Home = () => {
                         products={products.populars}
                     />
 
+                    <FullBanner />
+
+                    <CarouselProducts 
+                        category="Tecnología"
+                        products={products.populars}
+                    />
+
+                    <FullBanner />
+
+                    <CarouselProducts 
+                        category="Tecnología"
+                        products={products.populars}
+                    />
+
+                    <BrandsCarousel />
+
                 </div>
 
-                <Footer />
 
 
                 
 
             </main>
-        </div>
+            
+            <Footer />
+
+
+            <GoToTop />
+        </>
     )
 }
 
