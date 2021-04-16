@@ -5,6 +5,7 @@ import Header from './components/Header'
 import TopBar from './components/TopBar'
 // Pages
 import AboutUs from './pages/AboutUs'
+import Cart from './pages/Cart'
 import Category from './pages/Category'
 import Home from './pages/Home'
 import MyCount from './pages/MyCount'
@@ -48,6 +49,18 @@ const AppRoutes = () => {
             </a>
           </li>
 
+          <li>
+            <a>
+              <Link to="/carrito">Cart</Link>
+            </a>
+          </li>
+
+          <li>
+            <a>
+              <Link to="/checkout">Checkout</Link>
+            </a>
+          </li>
+
         </ul>
       </nav>
 
@@ -63,6 +76,8 @@ const AppRoutes = () => {
         <Route path="/producto/:name" component={SingleProduct} />
         <Route path="/producto" component={SingleProduct} />
         <Route path="/categoria" component={Category} />
+        <Route path="/carrito" component={Cart} />
+        <Route path="/checkou" component={Cart} />
       </Switch>
 
     </Router>
