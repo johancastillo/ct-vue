@@ -7,10 +7,12 @@ const UserState = props => {
     
     const initialState = {
         users: [],
-        selectedUser: null
+        selectedUser: null,
+        money: 'USD'
     }
 
     const [state, dispatch] = useReducer(UserReducer, initialState)
+
 
     const getUsers = async() => {
         const response = await axios.get("https://reqres.in/api/users")
@@ -18,6 +20,13 @@ const UserState = props => {
         dispatch({
             type: "GET_USERS",
             payload: response.data.data
+        })
+    }
+
+    const ChangeMoney = async () => {
+        dispatch({
+            type: "CHANGE_MONEY",
+            payload: state.money == 'USD' ? 'BS' : 'USD'
         })
     }
 
@@ -34,6 +43,8 @@ const UserState = props => {
         <UserContext.Provider value={{
             users: state.users,
             selectedUser: state.selectedUser,
+            money: state.money,
+            ChangeMoney,
             getUsers,
             getProfile
         }}>

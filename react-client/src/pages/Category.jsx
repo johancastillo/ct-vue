@@ -1,6 +1,5 @@
 import Breadcrumb from "../components/Breadcrumb"
 import CarouselProductsTwo from "../components/CarouselProductsTwo"
-import ContentCategory from "../components/ContentCategory"
 import Footer from "../components/Footer"
 import LatestProducts from "../components/LatestProducts"
 import ListCategory from "../components/ListCategory"

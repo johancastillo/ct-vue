@@ -1,6 +1,22 @@
 
+import { useContext } from 'react'
+
+
+
+import { useEffect, useState } from 'react'
+import UserContext from '../context/User/UserContext'
+
 
 const TabProducts = ({ data }) => {
+
+    const { money } = useContext(UserContext)
+
+    const [products, setProducts] = useState('')
+
+    useEffect(() => {
+        setProducts(products.slice(0,13))
+    }, [])
+
     return (
         <>
             <div className="col">
@@ -14,9 +30,11 @@ const TabProducts = ({ data }) => {
                                 <a className="nav-link active " id="pills-one-example1-tab" data-toggle="pill"
                                     href="#pills-one-example1" role="tab" aria-controls="pills-one-example1"
                                     aria-selected="true">
+                                    
                                     <div className="d-md-flex justify-content-md-center align-items-md-center">
                                         Populares
                                     </div>
+
                                 </a>
                             </li>
                             <li className="nav-item">
@@ -27,6 +45,7 @@ const TabProducts = ({ data }) => {
                                     <div className="d-md-flex justify-content-md-center align-items-md-center">
                                         Más vendidos
                                     </div>
+
                                 </a>
                             </li>
                             <li className="nav-item">
@@ -37,6 +56,7 @@ const TabProducts = ({ data }) => {
                                     <div className="d-md-flex justify-content-md-center align-items-md-center">
                                         Recientes
                                     </div>
+                                    
                                 </a>
                             </li>
                         </ul>
@@ -87,7 +107,12 @@ const TabProducts = ({ data }) => {
                                                             <div className="flex-center-between mb-1">
                                                                 <div className="prodcut-price">
                                                                     <div className="text-gray-100">
-                                                                        {product.price + ".00$"}
+                                                                        {
+                                                                            money == 'USD' ?
+                                                                            product.priceUSD + ".00$"
+                                                                            :
+                                                                            product.priceBS + ".00Bs"
+                                                                        }
                                                                     </div>
                                                                 </div>
                                                             
