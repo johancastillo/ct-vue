@@ -1,5 +1,9 @@
 import { useState, useEffect } from 'react'
 
+
+const desktopAPI = "http://127.0.0.1:8000/images/sliders/2021/04/1619108122_Captura%20de%20pantalla%20de%202020-11-27%2015-10-23.png"
+const mobileAPI = "http://127.0.0.1:8000/images/sliders/2021/04/1619108122_Captura%20de%20pantalla%20de%202020-11-27%2015-10-23.png"
+
 const slides = {
     imagesMobile: [
         { id: 1, image: 'https://d13lnhwm7sh4hi.cloudfront.net/wp-content/uploads/2021/01/08140919/banner2tarjetaefectivo767X767.png', description: "Image One", action: "https://compralotodo.com" },
@@ -16,6 +20,10 @@ const slides = {
 const Slider = () => {
 
     const [device, setDevice] = useState('')
+
+    const [sliders, setSliders] =  useState({})
+
+
 
     useEffect(() => {
         setDevice(window.screen.width)

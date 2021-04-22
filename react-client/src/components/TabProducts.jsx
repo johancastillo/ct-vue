@@ -106,7 +106,7 @@ const TabProducts = ({ data }) => {
 
                                                             <div className="flex-center-between mb-1">
                                                                 <div className="prodcut-price">
-                                                                    <div className="text-gray-100">
+                                                                    <div className="text-gray-100" style={money == 'BS' ? {fontSize: '15px'} : {}}>
                                                                         {
                                                                             money == 'USD' ?
                                                                             product.priceUSD + ".00$"

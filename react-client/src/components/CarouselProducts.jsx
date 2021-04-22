@@ -1,14 +1,23 @@
 
+import { useContext } from 'react'
+import UserContext from '../context/User/UserContext'
+
+
 
 const CarouselProducts = ({ products, category }) => {
+
+  const { money } = useContext(UserContext)
+
   return (
     <div class="mb-6">
       <div class="position-relative">
+
         <div class="border-bottom border-color-1 mb-2">
           <h3 class="section-title mb-0 pb-2 font-size-22">
             {category}
           </h3>
         </div>
+
         <div class="js-slick-carousel u-slick position-static overflow-hidden u-slick-overflow-visble pb-7 pt-2 px-1"
           data-pagi-classes="text-center right-0 bottom-1 left-0 u-slick__pagination u-slick__pagination--long mb-0 z-index-n1 mt-3 mt-md-0"
           data-slides-show="7" data-slides-scroll="1"
@@ -71,8 +80,17 @@ const CarouselProducts = ({ products, category }) => {
 
                           <div class="flex-center-between mb-1">
                             <div class="prodcut-price">
-                              <div class="text-gray-100">
-                                {product.priceUSD + ".00$"}
+                              <div class="text-gray-100" style={money == 'BS' ? { fontSize: '15px' } : {}}>
+                                <span>
+
+                                  {
+                                    money == 'USD' ?
+                                      product.priceUSD + ".00$"
+                                      :
+                                      product.priceBS + " " + "Bs"
+                                  }
+                                </span>
+
                               </div>
                             </div>
                             <div class="d-none d-xl-block prodcut-add-cart">
