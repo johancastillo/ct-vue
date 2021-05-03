@@ -1,0 +1,63 @@
+.money-container{
+    position: fixed;
+    bottom: 12px;
+    left: 12px;
+    z-index: 9999;
+}
+
+.money{
+
+    background: blue;
+
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.money .flat{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    img{
+        width: 70%;
+    }
+}
+
+.select-money{
+    /* width: 40px; */
+    height: 132px;
+    background: red;
+    border-radius: 25px;
+    margin-bottom: 5px;
+    position: fixed;
+    width: 48px;
+    bottom: 62px;
+    opacity: 0;
+
+    transition: all 2s;
+
+    /* Flexbox */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.select-money.active{
+    opacity: 1;
+}
+
+.select-money .option{
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    /* Flexbox */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

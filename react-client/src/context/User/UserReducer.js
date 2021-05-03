@@ -1,4 +1,4 @@
-import {GET_USERS, GET_PROFILE, CHANGE_MONEY} from "../types"
+import {GET_USERS, GET_PROFILE, CHANGE_MONEY_USD, CHANGE_MONEY_BS} from "../types"
 
 export default (state, action) => {
     const {payload, type} = action
@@ -14,7 +14,12 @@ export default (state, action) => {
                 ...state,
                 selectedUser: payload
             }
-        case CHANGE_MONEY:
+        case CHANGE_MONEY_USD:
+            return {
+                ...state,
+                money: payload
+            }
+        case CHANGE_MONEY_BS:
             return {
                 ...state,
                 money: payload

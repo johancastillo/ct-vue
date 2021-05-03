@@ -11,9 +11,9 @@ import TabProducts from '../components/TabProducts'
 import TopBar from "../components/TopBar"
 import BrandsCarousel from '../components/BrandsCarousel'
 import GoToTop from '../components/GoToTop'
-import Money from '../components/Money'
 // Data
 import data from './../data.json'
+import MoneyTwo from '../components/MoneyTwo'
 
 
 
@@ -33,7 +33,8 @@ const Home = () => {
             <main id="content" role="main">
                 <Slider device="600" />
 
-                <Money />
+                
+                <MoneyTwo />
                 
                 <br/>
                 <br/>

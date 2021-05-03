@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './styles/main.css'
+import './styles/main.scss'
 import AppRoutes from './AppRoutes'
 
 ReactDOM.render(

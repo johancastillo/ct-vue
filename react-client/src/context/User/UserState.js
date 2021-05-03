@@ -23,10 +23,17 @@ const UserState = props => {
         })
     }
 
-    const ChangeMoney = async () => {
+    const ChangeMoneyUSD = async () => {
         dispatch({
-            type: "CHANGE_MONEY",
-            payload: state.money == 'USD' ? 'BS' : 'USD'
+            type: "CHANGE_MONEY_USD",
+            payload: 'USD'
+        })
+    }
+
+    const ChangeMoneyBS = async () => {
+        dispatch({
+            type: "CHANGE_MONEY_BS",
+            payload: 'BS'
         })
     }
 
@@ -44,7 +51,8 @@ const UserState = props => {
             users: state.users,
             selectedUser: state.selectedUser,
             money: state.money,
-            ChangeMoney,
+            ChangeMoneyUSD,
+            ChangeMoneyBS,
             getUsers,
             getProfile
         }}>
