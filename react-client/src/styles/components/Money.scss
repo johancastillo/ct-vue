@@ -6,9 +6,6 @@
 }
 
 .money{
-
-    background: blue;
-
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -22,18 +19,20 @@
     height: 100%;
 
     img{
-        width: 70%;
+        width: 100%;
     }
 }
 
 .select-money{
     /* width: 40px; */
-    height: 132px;
-    background: red;
+    text-align: center;
+    height: 172px;
+    background: #fff;
+    border: 2px solid #515151;
     border-radius: 25px;
     margin-bottom: 5px;
     position: fixed;
-    width: 48px;
+    width: 58px;
     bottom: 62px;
     opacity: 0;
 
@@ -44,20 +43,21 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+
+    
+    .option{
+        width: 40px;
+        height: 40px;
+        background: #fff;
+        border-radius: 50%;
+        cursor: pointer;
+        /* Flexbox */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .select-money.active{
     opacity: 1;
-}
-
-.select-money .option{
-    width: 30px;
-    height: 30px;
-    background: #fff;
-    border-radius: 50%;
-    cursor: pointer;
-    /* Flexbox */
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
