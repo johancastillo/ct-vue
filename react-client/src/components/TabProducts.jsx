@@ -9,13 +9,17 @@ import UserContext from '../context/User/UserContext'
 
 const TabProducts = ({ data }) => {
 
-    const { money } = useContext(UserContext)
+    const { money, cart, addCart, cartProducts, addProductCart } = useContext(UserContext)
 
     const [products, setProducts] = useState('')
 
     useEffect(() => {
         setProducts(products.slice(0,13))
+
+        //console.log(cartProducts)
     }, [])
+
+    const add = () => addCart(cart + 1)
 
     return (
         <>
@@ -117,9 +121,8 @@ const TabProducts = ({ data }) => {
                                                                 </div>
                                                             
                                                                 <div className="d-none d-xl-block prodcut-add-cart">
-                                                                    <a href="../shop/single-product-fullwidth.html"
-                                                                        className="btn-add-cart btn-primary transition-3d-hover">
-                                                                        <i className="ec ec-add-to-cart"></i>
+                                                                    <a className="btn-add-cart btn-primary transition-3d-hover">
+                                                                        <i onClick={add} className="ec ec-add-to-cart"></i>
                                                                     </a>
                                                                 </div>
                                                             </div>

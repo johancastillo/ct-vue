@@ -1,6 +1,25 @@
+import { useContext, useEffect, useState } from 'react'
 import { Link } from 'wouter'
+import UserContext from '../context/User/UserContext'
+import Menu from './Menu'
+
 
 const Header = () => {
+
+    const { cart, cartTotal } = useContext(UserContext)
+    const [active, setActive] = useState(false)
+
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 20) {
+                setActive(true)
+            } else {
+                setActive(false)
+            }
+
+        })
+    }, [])
+
     return (
         <>
 
@@ -10,7 +29,7 @@ const Header = () => {
                     <bar />
                     {/* End Topbar */}
                     {/* Logo-Search-header-icons */}
-                    <div className="py-2 py-xl-5 bg-primary-down-lg">
+                    <div className="py-2 py-xl-5 bg-primary-down-lg navbar-container" id={active ? "active" : ""}>
                         <div className="container my-0dot5 my-xl-0 navbar">
                             <div className="row align-items-center" style={{ width: '100%' }}>
                                 {/* Logo-offcanvas-menu */}
@@ -38,321 +57,9 @@ const Header = () => {
                                     {/* End Nav */}
 
                                     {/* ========== HEADER SIDEBAR ========== */}
-                                    <aside id="sidebarHeader1" className="u-sidebar u-sidebar--left" aria-labelledby="sidebarHeaderInvoker">
-                                        <div className="u-sidebar__scroller">
-                                            <div className="u-sidebar__container">
-                                                <div className="u-header-sidebar__footer-offset">
-
-                                                    {/* Toggle Button */}
-                                                    <div className="position-absolute top-0 right-0 z-index-2 pt-4 pr-4 bg-white">
-                                                        <button type="button" className="close ml-auto" aria-controls="sidebarHeader" aria-haspopup="true" aria-expanded="false" data-unfold-event="click" data-unfold-hide-on-scroll="false" data-unfold-target="#sidebarHeader1" data-unfold-type="css-animation" data-unfold-animation-in="fadeInLeft" data-unfold-animation-out="fadeOutLeft" data-unfold-duration={500}>
-                                                            <span aria-hidden="true">
-                                                                <i className="ec ec-close-remove text-gray-90 font-size-20" />
-                                                            </span>
-                                                        </button>
-                                                    </div>
-                                                    {/* End Toggle Button */}
-
-                                                    {/* Content */}
-                                                    <div className="js-scrollbar u-sidebar__body">
-                                                        <div id="headerSidebarContent" className="u-sidebar__content u-header-sidebar__content">
-
-                                                            {/* Logo */}
-                                                            <a className="navbar-brand u-header__navbar-brand u-header__navbar-brand-center mb-3" href="index.html" aria-label="Electro">
-                                                                <Link to="/">
-                                                                    <img src="./assets/img/logo.svg" alt="" />
-                                                                </Link>
-                                                            </a>
-                                                            {/* End Logo */}
-
-                                                            {/* List */}
-                                                            <ul id="headerSidebarList" className="u-header-collapse__nav">
-                                                                {/* Value of the Day */}
-                                                                <li className>
-                                                                    <a className="u-header-collapse__nav-link font-weight-bold" href="#">Value of the Day</a>
-                                                                </li>
-                                                                {/* End Value of the Day */}
-                                                                {/* Top 100 Offers */}
-                                                                <li className>
-                                                                    <a className="u-header-collapse__nav-link font-weight-bold" href="#">Top 100 Offers</a>
-                                                                </li>
-                                                                {/* End Top 100 Offers */}
-                                                                {/* New Arrivals */}
-                                                                <li className>
-                                                                    <a className="u-header-collapse__nav-link font-weight-bold" href="#">New Arrivals</a>
-                                                                </li>
-                                                                {/* End New Arrivals */}
-                                                                {/* Computers & Accessories */}
-                                                                <li className="u-has-submenu u-header-collapse__submenu">
-                                                                    <a className="u-header-collapse__nav-link u-header-collapse__nav-pointer" href="javascript:;" data-target="#headerSidebarComputersCollapse" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="headerSidebarComputersCollapse">
-                                                                        Computers &amp; Accessories
-                                  </a>
-                                                                    <div id="headerSidebarComputersCollapse" className="collapse" data-parent="#headerSidebarContent">
-                                                                        <ul className="u-header-collapse__nav-list">
-                                                                            <li><span className="u-header-sidebar__sub-menu-title">Computers
-                                          &amp; Accessories</span></li>
-                                                                            <li className><a className="u-header-collapse__submenu-nav-link" href="#">All Computers &amp; Accessories</a>
-                                                                            </li>
-                                                                            <li className><a className="u-header-collapse__submenu-nav-link" href="#">Laptops, Desktops &amp;
-                                          Monitors</a></li>
-                                                                            <li className><a className="u-header-collapse__submenu-nav-link" href="#">Printers &amp; Ink</a></li>
-                                                                            <li className><a className="u-header-collapse__submenu-nav-link" href="#">Networking &amp; Internet
-                                          Devices</a></li>
-                                                                            <li className><a className="u-header-collapse__submenu-nav-link" href="#">Computer Accessories</a></li>
-                                                                            <li className><a className="u-header-collapse__submenu-nav-link" href="#">Software</a></li>
-                                                                            <li><span className="u-header-sidebar__sub-menu-title">Office
-                                          &amp; Stationery</span></li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">All Office &amp; Stationery</a>
-                                                                            </li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">All Electronics</a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </li>
-                                                                {/* End Computers & Accessories */}
-                                                                {/* Cameras, Audio & Video */}
-                                                                <li className="u-has-submenu u-header-collapse__submenu">
-                                                                    <a className="u-header-collapse__nav-link u-header-collapse__nav-pointer" href="javascript:;" data-target="#headerSidebarCamerasCollapse" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="headerSidebarCamerasCollapse">
-                                                                        Cameras, Audio &amp; Video
-                                  </a>
-                                                                    <div id="headerSidebarCamerasCollapse" className="collapse" data-parent="#headerSidebarContent">
-                                                                        <ul className="u-header-collapse__nav-list">
-                                                                            <li><span className="u-header-sidebar__sub-menu-title">Cameras
-                                          &amp; Photography</span></li>
-                                                                            <li className><a className="u-header-collapse__submenu-nav-link" href="#">Lenses</a></li>
-                                                                            <li className><a className="u-header-collapse__submenu-nav-link" href="#">Camera Accessories</a></li>
-                                                                            <li className><a className="u-header-collapse__submenu-nav-link" href="#">Security &amp; Surveillance</a>
-                                                                            </li>
-                                                                            <li className><a className="u-header-collapse__submenu-nav-link" href="#">Binoculars &amp; Telescopes</a>
-                                                                            </li>
-                                                                            <li className><a className="u-header-collapse__submenu-nav-link" href="#">Camcorders</a></li>
-                                                                            <li className><a className="u-header-collapse__submenu-nav-link" href="#">Software</a></li>
-                                                                            <li><span className="u-header-sidebar__sub-menu-title">Audio
-                                          &amp; Video</span></li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">All Audio &amp; Video</a></li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">Headphones &amp; Speakers</a></li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">All Electronics</a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </li>
-                                                                {/* End Cameras, Audio & Video */}
-                                                                {/* Mobiles & Tablets */}
-                                                                <li className="u-has-submenu u-header-collapse__submenu">
-                                                                    <a className="u-header-collapse__nav-link u-header-collapse__nav-pointer" href="javascript:;" data-target="#headerSidebarMobilesCollapse" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="headerSidebarMobilesCollapse">
-                                                                        Mobiles &amp; Tablets
-                                  </a>
-                                                                    <div id="headerSidebarMobilesCollapse" className="collapse" data-parent="#headerSidebarContent">
-                                                                        <ul className="u-header-collapse__nav-list">
-                                                                            <li><span className="u-header-sidebar__sub-menu-title">Mobiles
-                                          &amp; Tablets</span></li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">All Mobile Phones</a></li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">Smartphones</a></li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">Refurbished Mobiles</a></li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">Cases &amp; Covers</a></li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">All Mobile Accessories</a></li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">Cases &amp; Covers</a></li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">All Tablets</a></li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">Tablet Accessories</a></li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">All Electronics</a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </li>
-                                                                {/* End Mobiles & Tablets */}
-                                                                {/* Movies, Music & Video */}
-                                                                <li className="u-has-submenu u-header-collapse__submenu">
-                                                                    <a className="u-header-collapse__nav-link u-header-collapse__nav-pointer" href="javascript:;" data-target="#headerSidebarMoviesCollapse" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="headerSidebarMoviesCollapse">
-                                                                        Movies, Music &amp; Video
-                                  </a>
-                                                                    <div id="headerSidebarMoviesCollapse" className="collapse" data-parent="#headerSidebarContent">
-                                                                        <ul className="u-header-collapse__nav-list">
-                                                                            <li><span className="u-header-sidebar__sub-menu-title">Movies
-                                          &amp; TV Shows</span></li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">All Movies &amp; TV Shows</a></li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">All English</a></li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">All Hindi</a></li>
-                                                                            <li><span className="u-header-sidebar__sub-menu-title">Video
-                                          Games</span></li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">PC Games</a></li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">Consoles</a></li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">Accessories</a></li>
-                                                                            <li><span className="u-header-sidebar__sub-menu-title">Music</span>
-                                                                            </li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">All Music</a></li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">Indian Classical</a></li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">Musical Instruments</a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </li>
-                                                                {/* End Movies, Music & Video */}
-                                                                
-                                                                {/* TV & Audio */}
-                                                                <li className="u-has-submenu u-header-collapse__submenu">
-                                                                    <a className="u-header-collapse__nav-link u-header-collapse__nav-pointer" href="javascript:;" data-target="#headerSidebarTvCollapse" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="headerSidebarTvCollapse">
-                                                                        TV &amp; Audio
-                                                                    </a>
-                                                                    <div id="headerSidebarTvCollapse" className="collapse" data-parent="#headerSidebarContent">
-                                                                        <ul className="u-header-collapse__nav-list">
-                                                                            <li>
-                                                                                <span className="u-header-sidebar__sub-menu-title">
-                                                                                    Audio &amp; Video
-                                                                                </span>
-                                                                            </li>
-                                                                            
-                                                                            <li>
-                                                                                <a className="u-header-collapse__submenu-nav-link" href="#">
-                                                                                    All Audio &amp; Video
-                                                                                </a>
-                                                                            </li>
-
-                                                                            <li>
-                                                                                <a className="u-header-collapse__submenu-nav-link" href="#">
-                                                                                    Televisions
-                                                                                </a>
-                                                                            </li>
-
-                                                                            <li>
-                                                                                <a className="u-header-collapse__submenu-nav-link" href="#">
-                                                                                    Headphones
-                                                                                </a>
-                                                                            </li>
-
-                                                                            <li>
-                                                                                <a className="u-header-collapse__submenu-nav-link" href="#">
-                                                                                    Speakers
-                                                                                </a>
-                                                                            </li>
-
-                                                                            <li>
-                                                                                <a className="u-header-collapse__submenu-nav-link" href="#">
-                                                                                    Audio &amp; Video Accessories
-                                                                                </a>
-                                                                            </li>
-
-                                                                            <li>
-                                                                                <span className="u-header-sidebar__sub-menu-title">
-                                                                                    Music
-                                                                                </span>
-                                                                            </li>
-
-                                                                            <li>
-                                                                                <a className="u-header-collapse__submenu-nav-link" href="#">
-                                                                                    Televisions
-                                                                                </a>
-                                                                            </li>
-
-                                                                            <li>
-                                                                                <a className="u-header-collapse__submenu-nav-link" href="#">
-                                                                                    Headphones
-                                                                                </a>
-                                                                            </li>
-
-                                                                            <li>
-                                                                                <a className="u-header-collapse__submenu-nav-link" href="#">
-                                                                                    Electro Home Appliances
-                                                                                </a>
-                                                                            </li>
-
-                                                                        </ul>
-                                                                    </div>
-                                                                </li>
-                                                                {/* End TV & Audio */}
-                                                                
-                                                                {/* Watches & Eyewear */}
-                                                                <li className="u-has-submenu u-header-collapse__submenu">
-                                                                    <a className="u-header-collapse__nav-link u-header-collapse__nav-pointer" href="javascript:;" data-target="#headerSidebarWatchesCollapse" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="headerSidebarWatchesCollapse">
-                                                                        Watches &amp; Eyewear
-                                  </a>
-                                                                    <div id="headerSidebarWatchesCollapse" className="collapse" data-parent="#headerSidebarContent">
-                                                                        <ul className="u-header-collapse__nav-list">
-                                                                            <li><span className="u-header-sidebar__sub-menu-title">Watches</span>
-                                                                            </li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">All Watches</a></li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">Men's Watches</a></li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">Women's Watches</a></li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">Premium Watches</a></li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">Deals on Watches</a></li>
-                                                                            <li><span className="u-header-sidebar__sub-menu-title">Eyewear</span>
-                                                                            </li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">Men's Sunglasses</a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </li>
-                                                                {/* End Watches & Eyewear */}
-                                                                {/* Car, Motorbike & Industrial */}
-                                                                <li className="u-has-submenu u-header-collapse__submenu">
-                                                                    <a className="u-header-collapse__nav-link u-header-collapse__nav-pointer" href="javascript:;" data-target="#headerSidebarCarCollapse" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="headerSidebarCarCollapse">
-                                                                        Car, Motorbike &amp; Industrial
-                                  </a>
-                                                                    <div id="headerSidebarCarCollapse" className="collapse" data-parent="#headerSidebarContent">
-                                                                        <ul className="u-header-collapse__nav-list">
-                                                                            <li><span className="u-header-sidebar__sub-menu-title">Car
-                                          &amp; Motorbike</span></li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">All Cars &amp; Bikes</a></li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">Car &amp; Bike Care</a></li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">Lubricants</a></li>
-                                                                            <li><span className="u-header-sidebar__sub-menu-title">Shop
-                                          for Bike</span></li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">Helmets &amp; Gloves</a></li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">Bike Parts</a></li>
-                                                                            <li><span className="u-header-sidebar__sub-menu-title">Industrial
-                                          Supplies</span></li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">All Industrial Supplies</a>
-                                                                            </li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">Lab &amp; Scientific</a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </li>
-                                                                {/* End Car, Motorbike & Industrial */}
-                                                                {/* Accessories */}
-                                                                <li className="u-has-submenu u-header-collapse__submenu">
-                                                                    <a className="u-header-collapse__nav-link u-header-collapse__nav-pointer" href="javascript:;" data-target="#headerSidebarAccessoriesCollapse" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="headerSidebarAccessoriesCollapse">
-                                                                        Accessories
-                                  </a>
-                                                                    <div id="headerSidebarAccessoriesCollapse" className="collapse" data-parent="#headerSidebarContent">
-                                                                        <ul className="u-header-collapse__nav-list">
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">Cases</a></li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">Chargers</a></li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">Headphone Accessories</a></li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">Headphone Cases</a></li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">Headphones</a></li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">All Industrial Supplies</a>
-                                                                            </li>
-                                                                            <li><a className="u-header-collapse__submenu-nav-link" href="#">Lab &amp; Scientific</a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </li>
-                                                                {/* End Accessories */}
-                                                            </ul>
-                                                            {/* End List */}
-                                                        </div>
-                                                    </div>
-                                                    {/* End Content */}
-                                                </div>
-                                                {/* Footer */}
-                                                <footer id="SVGwaveWithDots" className="svg-preloader u-header-sidebar__footer">
-                                                    <ul className="list-inline mb-0">
-                                                        <li className="list-inline-item pr-3">
-                                                            <a className="u-header-sidebar__footer-link text-gray-90" href="#">Privacidad</a>
-                                                        </li>
-                                                        <li className="list-inline-item pr-3">
-                                                            <a className="u-header-sidebar__footer-link text-gray-90" href="#">Terminos</a>
-                                                        </li>
-                                                        <li className="list-inline-item">
-                                                            <a className="u-header-sidebar__footer-link text-gray-90" href="#">
-                                                                <i className="fas fa-info-circle" />
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                    {/* SVG Background Shape */}
-                                                    <div className="position-absolute right-0 bottom-0 left-0 z-index-n1">
-                                                        <img className="js-svg-injector" src="../../assets/svg/components/wave-bottom-with-dots.svg" alt="Image Description" data-parent="#SVGwaveWithDots" />
-                                                    </div>
-                                                    {/* End SVG Background Shape */}
-                                                </footer>
-                                                {/* End Footer */}
-                                            </div>
-                                        </div>
-                                    </aside>
+                                    <Menu />
                                     {/* ========== END HEADER SIDEBAR ========== */}
+
                                 </div>
                                 {/* End Logo-offcanvas-menu */}
                                 {/* Search Bar */}
@@ -392,7 +99,7 @@ const Header = () => {
                                                     <form className="js-focus-state input-group px-3">
                                                         <input className="form-control" type="search" placeholder="Buscar..." />
                                                         <div className="input-group-append">
-                                                            
+
                                                             <button className="btn btn-primary px-3" type="button">
                                                                 <i className="font-size-18 ec ec-search" />
                                                             </button>
@@ -403,11 +110,7 @@ const Header = () => {
                                                 {/* End Input */}
                                             </li>
                                             {/* End Search */}
-                                            <li className="col d-none d-xl-block">
-                                                <a href="../shop/compare.html" className="text-gray-90" data-toggle="tooltip" data-placement="top" title="Comparar">
-                                                    <i className="font-size-22 ec ec-compare" />
-                                                </a>
-                                            </li>
+                                            
                                             <li className="col d-none d-xl-block">
                                                 <a href="../shop/wishlist.html" className="text-gray-90" data-toggle="tooltip" data-placement="top" title="Favoritos">
                                                     <i className="font-size-22 ec ec-favorites" />
@@ -422,24 +125,30 @@ const Header = () => {
                                             <li className="col pr-xl-0 px-2 px-sm-3 d-xl-none">
                                                 <a href="../shop/cart.html" className="text-gray-90 position-relative d-flex " data-toggle="tooltip" data-placement="top" title="Cart">
                                                     <i className="font-size-22 ec ec-shopping-bag" />
-                                                    
-                                                    <span className="bg-lg-down-black width-22 height-22 bg-primary position-absolute d-flex align-items-center justify-content-center rounded-circle left-12 top-8 font-weight-bold font-size-12">2</span>
-                                                    
+
+                                                    <span className="bg-lg-down-black width-22 height-22 bg-primary position-absolute d-flex align-items-center justify-content-center rounded-circle left-12 top-8 font-weight-bold font-size-12">
+                                                        { cart }
+                                                    </span>
+
                                                     <span className="d-none d-xl-block font-weight-bold font-size-16 text-gray-90 ml-3">
                                                         00.00$
                                                     </span>
                                                 </a>
                                             </li>
-                                            
+
                                             <li className="col pr-xl-0 px-2 px-sm-3 d-none d-xl-block">
                                                 <div id="basicDropdownHoverInvoker" className="text-gray-90 position-relative d-flex " data-toggle="tooltip" data-placement="top" title="Cart" aria-controls="basicDropdownHover" aria-haspopup="true" aria-expanded="false" data-unfold-event="click" data-unfold-target="#basicDropdownHover" data-unfold-type="css-animation" data-unfold-duration={300} data-unfold-delay={300} data-unfold-hide-on-scroll="true" data-unfold-animation-in="slideInUp" data-unfold-animation-out="fadeOut">
                                                     <i className="font-size-22 ec ec-shopping-bag" />
-                                                    <span className="bg-lg-down-black width-22 height-22 bg-primary position-absolute d-flex align-items-center justify-content-center rounded-circle left-12 top-8 font-weight-bold font-size-12">2</span>
+
+                                                    <span className="bg-lg-down-black width-22 height-22 bg-primary position-absolute d-flex align-items-center justify-content-center rounded-circle left-12 top-8 font-weight-bold font-size-12">
+                                                        {cart}
+                                                    </span>
+
                                                     <span className="d-none d-xl-block font-weight-bold font-size-16 text-gray-90 ml-3">
-                                                        00.00$
+                                                        {`${cartTotal}.00$` }
                                                     </span>
                                                 </div>
-                                                
+
                                                 <div id="basicDropdownHover" className="cart-dropdown dropdown-menu dropdown-unfold border-top border-top-primary mt-3 border-width-2 border-left-0 border-right-0 border-bottom-0 left-auto right-0" aria-labelledby="basicDropdownHoverInvoker">
                                                     <ul className="list-unstyled px-3 pt-3">
                                                         <li className="border-bottom pb-3 mb-3">
@@ -493,6 +202,7 @@ const Header = () => {
                         </div>
                     </div>
                     {/* End Logo-Search-header-icons */}
+
                     {/* Vertical-and-secondary-menu */}
                     <div className="d-none d-xl-block container secondary-menu">
                         <div className="row">
@@ -1024,7 +734,7 @@ const Header = () => {
                                             {/* Button */}
                                             <li className="nav-item u-header__nav-last-item">
                                                 <a className="text-gray-90" href="#" target="_blank">
-                                                    Free Shipping on Orders $50+
+                                                    
                         </a>
                                             </li>
                                             {/* End Button */}

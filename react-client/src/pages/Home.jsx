@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useContext } from 'react'
+
 
 // Components
 import Ads from "../components/Ads"
@@ -14,6 +15,8 @@ import GoToTop from '../components/GoToTop'
 // Data
 import data from './../data.json'
 import MoneyTwo from '../components/MoneyTwo'
+// Context
+import UserContext from '../context/User/UserContext'
 
 
 
@@ -21,6 +24,9 @@ const Home = () => {
 
     const [products, setProducts] = useState(data)
     const [productsTab, setProductsTab] = useState(data.populars.slice(0, 12))
+
+    
+
 
     useEffect(() => {
         

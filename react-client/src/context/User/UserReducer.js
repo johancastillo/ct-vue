@@ -1,4 +1,6 @@
-import {GET_USERS, GET_PROFILE, CHANGE_MONEY_USD, CHANGE_MONEY_BS} from "../types"
+import {
+    GET_USERS, GET_PROFILE, CHANGE_MONEY_USD, CHANGE_MONEY_BS, ADD_CART
+} from "../types"
 
 export default (state, action) => {
     const {payload, type} = action
@@ -23,6 +25,11 @@ export default (state, action) => {
             return {
                 ...state,
                 money: payload
+            }
+        case ADD_CART:
+            return {
+                ...state,
+                cart: payload
             }
         default:
             return state

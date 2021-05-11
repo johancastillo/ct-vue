@@ -8,7 +8,10 @@ const UserState = props => {
     const initialState = {
         users: [],
         selectedUser: null,
-        money: 'USD'
+        money: 'USD',
+        cart: 0,
+        cartProducts: [],
+        cartTotal: 0
     }
 
     const [state, dispatch] = useReducer(UserReducer, initialState)
@@ -37,6 +40,27 @@ const UserState = props => {
         })
     }
 
+    const addCart = quantity => {
+        dispatch({
+            type: "ADD_CART",
+            payload: quantity
+        })
+    }
+
+    const addProductCart = product => {
+        dispatch({
+            type: "ADD_PRUDCT_CART",
+            payload: product
+        })
+    }
+
+    const changeTotal = newTotal => {
+        dispatch({
+            type: "CHANGE_TOTAL",
+            payload: newTotal
+        })
+    }
+
     const getProfile = async(id) => {
         const response = await axios.get("https://reqres.in/api/users/" + id)
         
@@ -51,6 +75,11 @@ const UserState = props => {
             users: state.users,
             selectedUser: state.selectedUser,
             money: state.money,
+            cart: state.cart,
+            cartProducts: state.cartProducts,
+            cartTotal: state.cartTotal,
+            addProductCart,
+            addCart,
             ChangeMoneyUSD,
             ChangeMoneyBS,
             getUsers,

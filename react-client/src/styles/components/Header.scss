@@ -1,0 +1,12 @@
+.navbar-container{
+    transition: all .7s;
+}
+
+.navbar-container#active{
+    position: fixed !important;
+    width: 100% !important;
+    background: white !important;
+    z-index: 999 !important;
+    top: 0 !important;
+    box-shadow: 0 5px 36px -7px !important;
+}
