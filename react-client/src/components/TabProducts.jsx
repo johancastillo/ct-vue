@@ -1,20 +1,27 @@
 
 import { useContext } from 'react'
 
-
+import axios from "axios"
 
 import { useEffect, useState } from 'react'
 import UserContext from '../context/User/UserContext'
 
 
-const TabProducts = ({ data }) => {
+const TabProducts = () => {
+
+    const url = "http://localhost:3004/products"
+    const url2 = "http://localhost:3004/products"
 
     const { money, cart, addCart, cartProducts, addProductCart } = useContext(UserContext)
 
-    const [products, setProducts] = useState('')
+    const [products, setProducts] = useState([])
 
     useEffect(() => {
         setProducts(products.slice(0,13))
+
+        axios.get(url2)
+        .then( response => setProducts(response.data) )
+        .catch(err => console.log(err))
 
         //console.log(cartProducts)
     }, [])
@@ -75,7 +82,7 @@ const TabProducts = ({ data }) => {
 
 
                                 {
-                                    data.map(product => {
+                                    products.map(product => {
                                         return (
                                             <li className="col-6 col-md-3 col-xl-2 product-item">
 
@@ -103,7 +110,7 @@ const TabProducts = ({ data }) => {
                                                                     className="d-block text-center">
 
                                                                     <img className="img-fluid"
-                                                                        src={product.image}
+                                                                        src={product.imagePrimary}
                                                                         alt="Image Description" />
                                                                 </a>
                                                             </div>
@@ -160,7 +167,7 @@ const TabProducts = ({ data }) => {
                             <ul className="row list-unstyled products-group no-gutters">
 
                                 {
-                                    data.map(product => {
+                                    products.map(product => {
                                         return (
                                             <li className="col-6 col-md-3 col-xl-2 product-item">
 
@@ -241,7 +248,7 @@ const TabProducts = ({ data }) => {
                             <ul className="row list-unstyled products-group no-gutters">
 
                                 {
-                                    data.map(product => {
+                                    products.map(product => {
                                         return (
                                             <li className="col-6 col-md-3 col-xl-2 product-item">
 
