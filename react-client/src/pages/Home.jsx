@@ -17,6 +17,7 @@ import data from './../data.json'
 import MoneyTwo from '../components/MoneyTwo'
 // Context
 import UserContext from '../context/User/UserContext'
+import Carousel from '../components/Carousel'
 
 
 
@@ -70,31 +71,33 @@ const Home = () => {
 
                     <FullBanner />
 
-                    <CarouselProducts 
-                        category="Tecnología"
+                    <Carousel 
+                        title="Hello"
                         products={products.populars}
                     />
 
                     <FullBanner />
 
-                    <CarouselProducts 
-                        category="Tecnología"
+                    <Carousel 
+                        title="Hello"
                         products={products.populars}
                     />
 
                     <FullBanner />
 
-                    <CarouselProducts 
-                        category="Tecnología"
+
+                    <Carousel 
+                        title="Hello"
                         products={products.populars}
                     />
 
                     <FullBanner />
-
-                    <CarouselProducts 
-                        category="Tecnología"
+                    
+                    <Carousel 
+                        title="Hello"
                         products={products.populars}
                     />
+                  
 
                     <BrandsCarousel />
 
