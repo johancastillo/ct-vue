@@ -99,7 +99,6 @@ const Home = () => {
                     />
                   
 
-                    <BrandsCarousel />
 
                 </div>
 
@@ -109,6 +108,8 @@ const Home = () => {
 
             </main>
             
+            <br/>
+
             <Footer />
 
 

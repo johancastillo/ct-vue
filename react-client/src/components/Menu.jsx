@@ -3,7 +3,7 @@ import { Link } from "wouter"
 
 const Menu = () => {
     return (
-        <aside id="sidebarHeader1" className="u-sidebar u-sidebar--left" aria-labelledby="sidebarHeaderInvoker">
+        <aside id="sidebarHeader1" className="u-sidebar u-sidebar--left" aria-labelledby="sidebarHeaderInvoker" style={{display: "none"}}>
             <div className="u-sidebar__scroller">
                 <div className="u-sidebar__container">
                     <div className="u-header-sidebar__footer-offset">

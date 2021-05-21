@@ -5,6 +5,7 @@ import axios from "axios"
 
 import { useEffect, useState } from 'react'
 import UserContext from '../context/User/UserContext'
+import { Link } from 'wouter'
 
 
 const TabProducts = () => {
@@ -17,11 +18,11 @@ const TabProducts = () => {
     const [products, setProducts] = useState([])
 
     useEffect(() => {
-        setProducts(products.slice(0,13))
+        setProducts(products.slice(0, 13))
 
         axios.get(url2)
-        .then( response => setProducts(response.data) )
-        .catch(err => console.log(err))
+            .then(response => setProducts(response.data))
+            .catch(err => console.log(err))
 
         //console.log(cartProducts)
     }, [])
@@ -41,7 +42,7 @@ const TabProducts = () => {
                                 <a className="nav-link active " id="pills-one-example1-tab" data-toggle="pill"
                                     href="#pills-one-example1" role="tab" aria-controls="pills-one-example1"
                                     aria-selected="true">
-                                    
+
                                     <div className="d-md-flex justify-content-md-center align-items-md-center">
                                         Populares
                                     </div>
@@ -52,7 +53,7 @@ const TabProducts = () => {
                                 <a className="nav-link " id="pills-two-example1-tab" data-toggle="pill"
                                     href="#pills-two-example1" role="tab" aria-controls="pills-two-example1"
                                     aria-selected="false">
-                                    
+
                                     <div className="d-md-flex justify-content-md-center align-items-md-center">
                                         Más vendidos
                                     </div>
@@ -63,11 +64,11 @@ const TabProducts = () => {
                                 <a className="nav-link " id="pills-three-example1-tab" data-toggle="pill"
                                     href="#pills-three-example1" role="tab"
                                     aria-controls="pills-three-example1" aria-selected="false">
-                                    
+
                                     <div className="d-md-flex justify-content-md-center align-items-md-center">
                                         Recientes
                                     </div>
-                                    
+
                                 </a>
                             </li>
                         </ul>
@@ -84,76 +85,78 @@ const TabProducts = () => {
                                 {
                                     products.map(product => {
                                         return (
-                                            <li className="col-6 col-md-3 col-xl-2 product-item">
+                                            <Link to={`/producto/${product.id}`}>
+                                                <li className="col-6 col-md-3 col-xl-2 product-item">
 
-                                                <div className="product-item__outer h-100 product">
-                                                    <div className="product-item__inner px-xl-4 p-3">
-                                                        <div className="product-item__body pb-xl-2">
-                                                            <div className="mb-2">
-                                                                <a
-                                                                    href="../shop/product-categories-7-column-full-width.html"
-                                                                    className="font-size-12 text-gray-5">
+                                                    <div className="product-item__outer h-100 product">
+                                                        <div className="product-item__inner px-xl-4 p-3">
+                                                            <div className="product-item__body pb-xl-2">
+                                                                <div className="mb-2">
+                                                                    <a
+                                                                        href="../shop/product-categories-7-column-full-width.html"
+                                                                        className="font-size-12 text-gray-5">
                                                                         {product.category}
-                                                                </a>
-                                                            </div>
-
-                                                            <h5 className="mb-1 product-item__title">
-                                                                <a
-                                                                    href="../shop/single-product-fullwidth.html"
-                                                                    className="text-blue font-weight-bold">
-                                                                    {product.title}
-                                                                </a>
-                                                            </h5>
-
-                                                            <div className="mb-2">
-                                                                <a href="../shop/single-product-fullwidth.html"
-                                                                    className="d-block text-center">
-
-                                                                    <img className="img-fluid"
-                                                                        src={product.imagePrimary}
-                                                                        alt="Image Description" />
-                                                                </a>
-                                                            </div>
-
-                                                            <div className="flex-center-between mb-1">
-                                                                <div className="prodcut-price">
-                                                                    <div className="text-gray-100" style={money == 'BS' ? {fontSize: '15px'} : {}}>
-                                                                        {
-                                                                            money == 'USD' ?
-                                                                            product.priceUSD + ".00$"
-                                                                            :
-                                                                            product.priceBS + ".00Bs"
-                                                                        }
-                                                                    </div>
-                                                                </div>
-                                                            
-                                                                <div className="d-none d-xl-block prodcut-add-cart">
-                                                                    <a className="btn-add-cart btn-primary transition-3d-hover">
-                                                                        <i onClick={add} className="ec ec-add-to-cart"></i>
                                                                     </a>
                                                                 </div>
+
+                                                                <h5 className="mb-1 product-item__title">
+                                                                    <a
+                                                                        href="../shop/single-product-fullwidth.html"
+                                                                        className="text-blue font-weight-bold">
+                                                                        {product.title}
+                                                                    </a>
+                                                                </h5>
+
+                                                                <div className="mb-2">
+                                                                    <a href="../shop/single-product-fullwidth.html"
+                                                                        className="d-block text-center">
+
+                                                                        <img className="img-fluid"
+                                                                            src={product.imagePrimary}
+                                                                            alt="Image Description" />
+                                                                    </a>
+                                                                </div>
+
+                                                                <div className="flex-center-between mb-1">
+                                                                    <div className="prodcut-price">
+                                                                        <div className="text-gray-100" style={money == 'BS' ? { fontSize: '15px' } : {}}>
+                                                                            {
+                                                                                money == 'USD' ?
+                                                                                    product.priceUSD + ".00$"
+                                                                                    :
+                                                                                    product.priceBS + ".00Bs"
+                                                                            }
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div className="d-none d-xl-block prodcut-add-cart">
+                                                                        <a className="btn-add-cart btn-primary transition-3d-hover">
+                                                                            <i onClick={add} className="ec ec-add-to-cart"></i>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                        
-                                                        <div className="product-item__footer">
-                                                            <div className="border-top pt-2 flex-center-between flex-wrap">
-                                                                <a href="../shop/compare.html"
-                                                                    className="text-gray-6 font-size-13"><i
-                                                                        className="ec ec-compare mr-1 font-size-15"></i>
+
+                                                            <div className="product-item__footer">
+                                                                <div className="border-top pt-2 flex-center-between flex-wrap">
+                                                                    <a href="../shop/compare.html"
+                                                                        className="text-gray-6 font-size-13"><i
+                                                                            className="ec ec-compare mr-1 font-size-15"></i>
                                                                     Compare
                                                                 </a>
 
-                                                                <a href="../shop/wishlist.html"
-                                                                    className="text-gray-6 font-size-13"><i
-                                                                        className="ec ec-favorites mr-1 font-size-15"></i>
+                                                                    <a href="../shop/wishlist.html"
+                                                                        className="text-gray-6 font-size-13"><i
+                                                                            className="ec ec-favorites mr-1 font-size-15"></i>
                                                                     Add to Wishlist
                                                                 </a>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
 
-                                            </li>
+                                                </li>
+                                            </Link>
 
                                         )
                                     })
@@ -261,7 +264,7 @@ const TabProducts = () => {
                                                                 {product.category}
                                                             </a>
                                                             </div>
-                                                        
+
                                                             <h5 className="mb-1 product-item__title">
                                                                 <a
                                                                     href="../shop/single-product-fullwidth.html"
@@ -305,7 +308,7 @@ const TabProducts = () => {
                                                                         className="ec ec-compare mr-1 font-size-15"></i>
                                                                         Compare
                                                                 </a>
-                                                                
+
                                                                 <a href="../shop/wishlist.html"
                                                                     className="text-gray-6 font-size-13"><i
                                                                         className="ec ec-favorites mr-1 font-size-15"></i>

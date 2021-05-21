@@ -1,0 +1,17 @@
+.other-images{
+    transition: all 2s;
+}
+
+.other-images .item{
+    cursor: pointer;
+    padding: 4px;
+}
+
+.other-images .item.active{
+    border-top: 4px solid #faa42c;
+}
+
+.other-images .item:hover{
+    
+}
+

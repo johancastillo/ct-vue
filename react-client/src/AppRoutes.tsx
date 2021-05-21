@@ -35,8 +35,7 @@ class AppRoutes extends Component{
             <Route path="/" component={Home} />
             <Route path="/nosotros" component={AboutUs} />
             <Route path="/mi-cuenta" component={MyCount} />
-            <Route path="/producto/:name" component={SingleProduct} />
-            <Route path="/producto" component={SingleProduct} />
+            <Route path="/producto/:id" component={SingleProduct} />
             <Route path="/categoria" component={Category} />
             <Route path="/carrito" component={Cart} />
             <Route path="/checkout" component={Checkout} />

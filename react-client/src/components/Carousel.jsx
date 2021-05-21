@@ -1,5 +1,6 @@
 
 import { useContext } from 'react'
+import { Link } from 'wouter'
 import UserContext from '../context/User/UserContext'
 
 
@@ -66,28 +67,30 @@ const Carousel = ({ title, products, link }) => {
                     {
                         products.map(product => {
                             return (
-                                <div className="slick" key={product.id}>
-                                    <span className="category">Redes</span>
-                                    <h2>Producto sadsdasd</h2>
+                                <Link to="/producto">
+                                    <div className="slick" key={product.id}>
+                                        <span className="category">Redes</span>
+                                        <h2>Producto sadsdasd</h2>
 
-                                    <div>
-                                        <a href="/">
+                                        <div>
+                                            <a href="/">
 
-                                            <picture>
-                                                <img src={product.image} alt="Image" />
-                                            </picture>
-                                        </a>
+                                                <picture>
+                                                    <img src={product.image} alt="Image" />
+                                                </picture>
+                                            </a>
+                                        </div>
+
+                                        <span className="price prodcut-price">
+                                            {
+                                                money == 'USD' ?
+                                                    product.priceUSD + ".00$"
+                                                    :
+                                                    product.priceBS + " " + "Bs"
+                                            }
+                                        </span>
                                     </div>
-
-                                    <span className="price prodcut-price">
-                                        {
-                                            money == 'USD' ?
-                                                product.priceUSD + ".00$"
-                                                :
-                                                product.priceBS + " " + "Bs"
-                                        }
-                                    </span>
-                                </div>
+                                </Link>
                             )
                         })
                     }
