@@ -9,16 +9,14 @@ import axios from "axios"
 
 const SingleProduct = ({params}) => {
 
-    const [product, setProduct] = useState({})
+    
     
     
     useEffect(() => {
         // Position page top
         window.scrollTo(0,0)
 
-        axios.get(`http://localhost:3004/products/${params.id}`)
-        .then(response => setProduct(response.data))
-        .catch(err => console.log(err))
+        
 
         // Test
         console.log(params)
@@ -31,7 +29,7 @@ const SingleProduct = ({params}) => {
                 <Breadcrumb />
 
                 <div className="container">
-                    <SingleProductBody data={product} />
+                    <SingleProductBody id={params.id} />
 
                     <SingleProductTab />
 

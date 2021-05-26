@@ -1,26 +1,57 @@
 
 import { useState, useEffect } from 'react'
+import axios from "axios"
 
-const SingleProductBody = ({ data }) => {
+const SingleProductBody = ({ id }) => {
 
   const [quantity, setQuantity] = useState(1)
 
-  let imagesProduct = {
-    1: data.imagePrimary,
-    2: "https://d13lnhwm7sh4hi.cloudfront.net/wp-content/uploads/2020/07/13091539/501108003_bts-06-cornetas-splash-proof-white_01.jpg",
-    3: "https://d13lnhwm7sh4hi.cloudfront.net/wp-content/uploads/2020/07/13091533/501108003_bts-06-cornetas-splash-proof-white_02.jpg",
-    4: "https://d13lnhwm7sh4hi.cloudfront.net/wp-content/uploads/2020/07/13091518/501108003_bts-06-cornetas-splash-proof-white_04.jpg",
-    5: "https://d13lnhwm7sh4hi.cloudfront.net/wp-content/uploads/2020/07/13091506/501108003_bts-06-cornetas-splash-proof-white_06.jpg"
-  }
+ 
 
-  const [imagePresentation, setImagePresentation] = useState({})
+  const [imagePresentation, setImagePresentation] = useState("")
+
+  const [product, setProduct] = useState({})
+
+
+  const [imageOne, setImageOne] = useState("")
+  const [imageTwo, setImageTwo] = useState("")
+  const [imageThree, setImageThree] = useState("")
+  
+
 
   useEffect(() => {
+    axios.get(`http://localhost:3004/products/${id}`)
+      .then(response => { 
+        setProduct(response.data)
 
-    setImagePresentation(imagesProduct[1])
+        
+
+        //console.log(product.imagePrimary)
+      })
+      .catch(err => console.log(err))
+
+    
+    console.log(product)
   }, [])
 
-  const changePresentation = id => setImagePresentation(imagesProduct[id])
+  useEffect(() => {
+    setImageOne(product.imagePrimary)
+    setImageTwo("https://d13lnhwm7sh4hi.cloudfront.net/wp-content/uploads/2019/10/29175450/009800057719-tic-tac-caramelos-menta-02.jpg")
+    setImagePresentation(product.imagePrimary)
+
+    const exe = () => changePresentation(imageOne)
+    exe()
+
+    // Test
+    console.log(product.othersImages)
+
+    // Map othersImages
+  
+
+
+  }, [product])
+
+  const changePresentation = image => setImagePresentation(image)
 
   return (
     <div className="mb-xl-14 mb-6">
@@ -29,7 +60,7 @@ const SingleProductBody = ({ data }) => {
 
           {/* Image primary  Start*/}
           <div className="image-primary-">
-            <img src={ imagePresentation ? imagePresentation : imagesProduct[1] } width="100%" alt="" />
+            <img src={imagePresentation ? imagePresentation : imageOne} width="100%" alt="" />
           </div>
           {/* Image primary  End*/}
 
@@ -39,21 +70,14 @@ const SingleProductBody = ({ data }) => {
           {/* Others images Start */}
           <div className="row other-images">
 
-            <div className={imagePresentation === imagesProduct[1] ? "col-2 item active" : "col-2 item"} onClick={() => changePresentation(1)}>
-              <img src={imagesProduct[1]} width="100%" alt="" />
+            <div className={imagePresentation === imageOne ? "col-2 item active" : "col-2 item"} onClick={() => changePresentation(imageOne)}>
+              <img src={imageOne} width="100%" alt="" />
             </div>
 
-            <div className={imagePresentation === imagesProduct[2] ? "col-2 item active" : "col-2 item"} onClick={() => changePresentation(2)}>
-              <img src={imagesProduct[2]} width="100%" alt="" />
+            <div className={imagePresentation === imageTwo ? "col-2 item active" : "col-2 item"} onClick={() => changePresentation(imageTwo)}>
+              <img src={imageTwo} width="100%" alt="" />
             </div>
-
-            <div className={imagePresentation === imagesProduct[3] ? "col-2 item active" : "col-2 item"} onClick={() => changePresentation(3)}>
-              <img src={imagesProduct[3]} width="100%" alt="" />
-            </div>
-
-            <div className={imagePresentation === imagesProduct[4] ? "col-2 item active" : "col-2 item"} onClick={() => changePresentation(4)}>
-              <img src={imagesProduct[4]} width="100%" alt="" />
-            </div>
+            
 
 
           </div>
@@ -71,7 +95,7 @@ const SingleProductBody = ({ data }) => {
                 </a>
 
               <h2 className="font-size-25 text-lh-1dot2">
-                Ultra Wireless S50 Headphones S50 with Bluetooth
+                { product.title }
                 </h2>
 
               <div className="mb-2">
@@ -94,7 +118,7 @@ const SingleProductBody = ({ data }) => {
                 <a href="#" className="max-width-150 ml-n2 mb-2 mb-md-0 d-block"><img className="img-fluid" src="../../assets/img/200X60/img1.png" alt="Image Description" /></a>
 
                 <div className="ml-md-3 text-gray-9 font-size-14">
-                  Disponible: <span className="text-green font-weight-bold">26 en stock</span>
+                  Disponible: <span className="text-green font-weight-bold">{ product.in_stock }</span>
                 </div>
               </div>
             </div>
@@ -122,7 +146,7 @@ const SingleProductBody = ({ data }) => {
             <div className="mb-4">
               <div className="d-flex align-items-baseline">
                 <ins className="font-size-36 text-decoration-none">
-                  $1,999.00
+                  { `${product.priceUSD}$` }
                     </ins>
                 <del className="font-size-20 ml-2 text-gray-6">$2,299.00</del>
               </div>

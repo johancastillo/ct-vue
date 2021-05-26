@@ -85,20 +85,21 @@ const TabProducts = () => {
                                 {
                                     products.map(product => {
                                         return (
-                                            <Link to={`/producto/${product.id}`}>
-                                                <li className="col-6 col-md-3 col-xl-2 product-item">
 
-                                                    <div className="product-item__outer h-100 product">
-                                                        <div className="product-item__inner px-xl-4 p-3">
-                                                            <div className="product-item__body pb-xl-2">
-                                                                <div className="mb-2">
-                                                                    <a
-                                                                        href="../shop/product-categories-7-column-full-width.html"
-                                                                        className="font-size-12 text-gray-5">
-                                                                        {product.category}
-                                                                    </a>
-                                                                </div>
+                                            <li className="col-6 col-md-3 col-xl-2 product-item">
 
+                                                <div className="product-item__outer h-100 product">
+                                                    <div className="product-item__inner px-xl-4 p-3">
+                                                        <div className="product-item__body pb-xl-2">
+                                                            <div className="mb-2">
+                                                                <a
+                                                                    href="../shop/product-categories-7-column-full-width.html"
+                                                                    className="font-size-12 text-gray-5">
+                                                                    {product.category}
+                                                                </a>
+                                                            </div>
+
+                                                            <Link to={`/producto/${product.id}`}>
                                                                 <h5 className="mb-1 product-item__title">
                                                                     <a
                                                                         href="../shop/single-product-fullwidth.html"
@@ -106,6 +107,7 @@ const TabProducts = () => {
                                                                         {product.title}
                                                                     </a>
                                                                 </h5>
+
 
                                                                 <div className="mb-2">
                                                                     <a href="../shop/single-product-fullwidth.html"
@@ -117,47 +119,47 @@ const TabProducts = () => {
                                                                     </a>
                                                                 </div>
 
-                                                                <div className="flex-center-between mb-1">
-                                                                    <div className="prodcut-price">
-                                                                        <div className="text-gray-100" style={money == 'BS' ? { fontSize: '15px' } : {}}>
-                                                                            {
-                                                                                money == 'USD' ?
-                                                                                    product.priceUSD + ".00$"
-                                                                                    :
-                                                                                    product.priceBS + ".00Bs"
-                                                                            }
-                                                                        </div>
-                                                                    </div>
+                                                            </Link>
 
-                                                                    <div className="d-none d-xl-block prodcut-add-cart">
-                                                                        <a className="btn-add-cart btn-primary transition-3d-hover">
-                                                                            <i onClick={add} className="ec ec-add-to-cart"></i>
-                                                                        </a>
+                                                            <div className="flex-center-between mb-1">
+                                                                <div className="prodcut-price">
+                                                                    <div className="text-gray-100" style={money == 'BS' ? { fontSize: '15px' } : {}}>
+                                                                        {
+                                                                            money == 'USD' ?
+                                                                                product.priceUSD + ".00$"
+                                                                                :
+                                                                                product.priceBS + ".00Bs"
+                                                                        }
                                                                     </div>
                                                                 </div>
-                                                            </div>
 
-                                                            <div className="product-item__footer">
-                                                                <div className="border-top pt-2 flex-center-between flex-wrap">
-                                                                    <a href="../shop/compare.html"
-                                                                        className="text-gray-6 font-size-13"><i
-                                                                            className="ec ec-compare mr-1 font-size-15"></i>
-                                                                    Compare
-                                                                </a>
-
-                                                                    <a href="../shop/wishlist.html"
-                                                                        className="text-gray-6 font-size-13"><i
-                                                                            className="ec ec-favorites mr-1 font-size-15"></i>
-                                                                    Add to Wishlist
-                                                                </a>
+                                                                <div className="d-none d-xl-block prodcut-add-cart">
+                                                                    <a className="btn-add-cart btn-primary transition-3d-hover">
+                                                                        <i onClick={add} className="ec ec-add-to-cart"></i>
+                                                                    </a>
                                                                 </div>
                                                             </div>
                                                         </div>
+
+                                                        <div className="product-item__footer">
+                                                            <div className="border-top pt-2 flex-center-between flex-wrap">
+                                                                <a href="../shop/compare.html"
+                                                                    className="text-gray-6 font-size-13"><i
+                                                                        className="ec ec-compare mr-1 font-size-15"></i>
+                                                                    Compare
+                                                                </a>
+
+                                                                <a href="../shop/wishlist.html"
+                                                                    className="text-gray-6 font-size-13"><i
+                                                                        className="ec ec-favorites mr-1 font-size-15"></i>
+                                                                    Add to Wishlist
+                                                                </a>
+                                                            </div>
+                                                        </div>
                                                     </div>
+                                                </div>
 
-                                                </li>
-                                            </Link>
-
+                                            </li>
                                         )
                                     })
                                 }

@@ -1,111 +1,195 @@
 {
-  "oferts": [
-    {
-      "id": 1,
-      "title": "Vino espumante Prosecco la Marca",
-      "price": 100,
-      "price_ofert": 45,
-      "ofert_special": true,
-      "discount": 20,
-      "image": "https://d13lnhwm7sh4hi.cloudfront.net/wp-content/uploads/2019/10/21173833/085000017739_01-300x300.jpg",
-      "in_stock": 10,
-      "initial_amount": 20,
-      "already_sold": 10,
-      "date_limit": "Feb 14 2021 12:45:41 GMT-0400"
-    },
-    {
-      "id": 2,
-      "title": "Licuadora",
-      "price": 85,
-      "price_ofert": 45,
-      "discount": 20,
-      "image": "https://d13lnhwm7sh4hi.cloudfront.net/wp-content/uploads/2019/10/21173833/085000017739_01-300x300.jpg",
-      "in_stock": 10,
-      "initial_amount": 14,
-      "already_sold": 4,
-      "date_limit": "Feb 10 2021 15:45:41 GMT-0400"
-    },
-    {
-      "id": 3,
-      "title": "PlayStation 4",
-      "price": 85,
-      "price_ofert": 45,
-      "discount": 20,
-      "image": "https://d13lnhwm7sh4hi.cloudfront.net/wp-content/uploads/2019/10/21173833/085000017739_01-300x300.jpg",
-      "in_stock": 10,
-      "initial_amount": 14,
-      "already_sold": 4,
-      "date_limit": "Feb 10 2021 15:45:41 GMT-0400"
+    "products": [
+        {
+            "id": 1, 
+            "title": "Cornetas Splash Proof Black BTS-06", 
+            "priceUSD": 5,
+            "priceBS": 12500000,
+            "category": "Audio",
+            "subcategory": "Audio",
+            "in_stock": 19,
+            "description": "",
+            "sku": "501108007",
+            "stars": 4.5,
+            "comments": [
+                { "username": "Alejandro Ortiz", "datetime": "20 noviembre, 2020", "comment": "Ahora mi esposa recibirá dolares en efectivo en venezuela." },
+                { "username": "Nersa Torres", "datetime": "24 noviembre, 2020", "comment": "Anteriormente enviaba dinero a mi familia a través de una casa de cambio, pero les llegaba Bolivares, a los días ya eso era nada, con este producto ya es totalmente distinto. Muchas gracias" },
+                { "username": "rodrigjennifer", "datetime": "2 diciembre, 2020", "comment": "excelente servicio personas responsables lo seguire usando siempre que pueda. la mejor opción si tienes una emergencia o si quieres resguardar tus ahorros." },
+                { "username": "Robert Garcia", "datetime": "4 diciembre, 2020", "comment": "Es facil y por simples pasos tus familiares pueden ir a retirarlos sin problemas!" }
+            ],
+            "imagePrimary": "https://d13lnhwm7sh4hi.cloudfront.net/wp-content/uploads/2020/07/13091442/501108007_bts-06-cornetas-splash-proof-black_01-300x300.jpg",
+            "othersImages": ["https://d13lnhwm7sh4hi.cloudfront.net/wp-content/uploads/2020/07/13091434/501108007_bts-06-cornetas-splash-proof-black_02.jpg", "https://d13lnhwm7sh4hi.cloudfront.net/wp-content/uploads/2020/07/13091425/501108007_bts-06-cornetas-splash-proof-black_03.jpg", "https://d13lnhwm7sh4hi.cloudfront.net/wp-content/uploads/2020/07/13091417/501108007_bts-06-cornetas-splash-proof-black_04.jpg", "https://d13lnhwm7sh4hi.cloudfront.net/wp-content/uploads/2020/07/13091409/501108007_bts-06-cornetas-splash-proof-black_05-600x657.jpg"]
+        },
+        {
+            "id": 2, 
+            "title": "Mouse Inalámbrico Ultra Delgado Rojo", 
+            "priceUSD": 5,
+            "priceBS": 12500000,
+            "category": "Accesorios y Computación",
+            "subcategory": "Accesorios",
+            "in_stock": 4,
+            "description": "",
+            "sku": "203105004",
+            "stars": 2.5,
+            "comments": [
+                { "username": "Alejandro Ortiz", "datetime": "20 noviembre, 2020", "comment": "Ahora mi esposa recibirá dolares en efectivo en venezuela." },
+                { "username": "Nersa Torres", "datetime": "24 noviembre, 2020", "comment": "Anteriormente enviaba dinero a mi familia a través de una casa de cambio, pero les llegaba Bolivares, a los días ya eso era nada, con este producto ya es totalmente distinto. Muchas gracias" },
+                { "username": "rodrigjennifer", "datetime": "2 diciembre, 2020", "comment": "excelente servicio personas responsables lo seguire usando siempre que pueda. la mejor opción si tienes una emergencia o si quieres resguardar tus ahorros." },
+                { "username": "Robert Garcia", "datetime": "4 diciembre, 2020", "comment": "Es facil y por simples pasos tus familiares pueden ir a retirarlos sin problemas!" }
+            ],
+            "imagePrimary": "https://d13lnhwm7sh4hi.cloudfront.net/wp-content/uploads/2019/10/18170048/ime-26316-mouse-inalambrico-ultra-delgado-rojo-1.jpg",
+            "othersImages": ["https://d13lnhwm7sh4hi.cloudfront.net/wp-content/uploads/2019/10/18170051/ime-26316-mouse-inalambrico-ultra-delgado-rojo-2.jpg", "https://d13lnhwm7sh4hi.cloudfront.net/wp-content/uploads/2019/10/18170054/ime-26316-mouse-inalambrico-ultra-delgado-rojo-3-600x600.jpg", "https://d13lnhwm7sh4hi.cloudfront.net/wp-content/uploads/2019/10/18170056/ime-26316-mouse-inalambrico-ultra-delgado-rojo-4.jpg"]
+        },
+        {
+            "id": 3,
+            "title": "Caramelos de Menta Tic Tac 29gr", 
+            "priceUSD": 1,
+            "priceBS": 2800000,
+            "category": "Alimentos",
+            "subcategory": "Caramelos",
+            "in_stock": 84,
+            "description": "Los clásicos Caramelos de Menta Tic Tac están aquí con su sabor refrescante para que los disfrutes en donde estés, en cualquier momento que desees. Un minicaramelo con cobertura de azúcar. Su nombre viene del ruido que hace el envase al abrir y cerrarse. Bajo el lema “enciende tu lado fresh”. Su presentación de 29 gramos, lo hace perfecto para llevarlo en tu bolsillo o cartera y disfrutarlos a donde vayas.",
+            "sku": "116101005",
+            "stars": 5,
+            "comments": [
+                { "username": "Alejandro Ortiz", "datetime": "20 noviembre, 2020", "comment": "Ahora mi esposa recibirá dolares en efectivo en venezuela." },
+                { "username": "Nersa Torres", "datetime": "24 noviembre, 2020", "comment": "Anteriormente enviaba dinero a mi familia a través de una casa de cambio, pero les llegaba Bolivares, a los días ya eso era nada, con este producto ya es totalmente distinto. Muchas gracias" },
+                { "username": "rodrigjennifer", "datetime": "2 diciembre, 2020", "comment": "excelente servicio personas responsables lo seguire usando siempre que pueda. la mejor opción si tienes una emergencia o si quieres resguardar tus ahorros." },
+                { "username": "Robert Garcia", "datetime": "4 diciembre, 2020", "comment": "Es facil y por simples pasos tus familiares pueden ir a retirarlos sin problemas!" }
+            ],
+            "imagePrimary": "https://d13lnhwm7sh4hi.cloudfront.net/wp-content/uploads/2019/10/29175447/009800057719-tic-tac-caramelos-menta-01.jpg",
+            "othersImages": ["https://d13lnhwm7sh4hi.cloudfront.net/wp-content/uploads/2019/10/29175450/009800057719-tic-tac-caramelos-menta-02.jpg"]
+        },
+        {
+            "id": 4,
+            "title": "Pimienta Negra Molida Kirkland de 348 Gr", 
+            "priceUSD": 5,
+            "priceBS": 2800000,
+            "category": "Alimentos",
+            "subcategory": "Adobos y Especias",
+            "in_stock": 70,
+            "description": "",
+            "sku": "109102026",
+            "stars": 3,
+            "comments": [
+                { "username": "Alejandro Ortiz", "datetime": "20 noviembre, 2020", "comment": "Ahora mi esposa recibirá dolares en efectivo en venezuela." },
+                { "username": "Nersa Torres", "datetime": "24 noviembre, 2020", "comment": "Anteriormente enviaba dinero a mi familia a través de una casa de cambio, pero les llegaba Bolivares, a los días ya eso era nada, con este producto ya es totalmente distinto. Muchas gracias" },
+                { "username": "rodrigjennifer", "datetime": "2 diciembre, 2020", "comment": "excelente servicio personas responsables lo seguire usando siempre que pueda. la mejor opción si tienes una emergencia o si quieres resguardar tus ahorros." },
+                { "username": "Robert Garcia", "datetime": "4 diciembre, 2020", "comment": "Es facil y por simples pasos tus familiares pueden ir a retirarlos sin problemas!" }
+            ],
+            "imagePrimary": "https://d13lnhwm7sh4hi.cloudfront.net/wp-content/uploads/2020/04/20174146/0096619164981_kirland-pimienta-negra-molida-348-g-ed.jpg",
+            "othersImages": []
+        },
+        {
+            "id": 5,
+            "title": "Maiz Amarillo Entero Arcor de 300 Gr", 
+            "priceUSD": 2,
+            "priceBS": 2800000,
+            "category": "Alimentos",
+            "subcategory": "Enlatados",
+            "in_stock": 3,
+            "description": "Granos de choclo amarillo enteros libres de gluten.",
+            "sku": "109102026",
+            "stars": 4,
+            "comments": [
+                { "username": "Alejandro Ortiz", "datetime": "20 noviembre, 2020", "comment": "Ahora mi esposa recibirá dolares en efectivo en venezuela." },
+                { "username": "Nersa Torres", "datetime": "24 noviembre, 2020", "comment": "Anteriormente enviaba dinero a mi familia a través de una casa de cambio, pero les llegaba Bolivares, a los días ya eso era nada, con este producto ya es totalmente distinto. Muchas gracias" },
+                { "username": "rodrigjennifer", "datetime": "2 diciembre, 2020", "comment": "excelente servicio personas responsables lo seguire usando siempre que pueda. la mejor opción si tienes una emergencia o si quieres resguardar tus ahorros." },
+                { "username": "Robert Garcia", "datetime": "4 diciembre, 2020", "comment": "Es facil y por simples pasos tus familiares pueden ir a retirarlos sin problemas!" }
+            ],
+            "imagePrimary": "https://d13lnhwm7sh4hi.cloudfront.net/wp-content/uploads/2020/03/19163145/7790580980009_Arcor-Maiz-Amarillo-Entero-300g.jpg",
+            "othersImages": []
+        },
+        {
+            "id": 6,
+            "title": "Pepitonas en Salsa Picante Margarita 140gr", 
+            "priceUSD": 2,
+            "priceBS": 2800000,
+            "category": "Alimentos",
+            "subcategory": "Enlatados",
+            "in_stock": 3,
+            "description": "Las Pepitonas en Salsa Picante Margarita se utilizan para preparar riquísimas recetas como son las pepitonas a la vinagreta, ceviche de pepitonas, fosforera, guisadas o combinadas con arroz o pasta. En una cómoda presentación en lata de 140 gramos, le va a encantar a toda tu familia.",
+            "sku": "109102026",
+            "stars": 4,
+            "comments": [
+                { "username": "Alejandro Ortiz", "datetime": "20 noviembre, 2020", "comment": "Ahora mi esposa recibirá dolares en efectivo en venezuela." },
+                { "username": "Nersa Torres", "datetime": "24 noviembre, 2020", "comment": "Anteriormente enviaba dinero a mi familia a través de una casa de cambio, pero les llegaba Bolivares, a los días ya eso era nada, con este producto ya es totalmente distinto. Muchas gracias" },
+                { "username": "rodrigjennifer", "datetime": "2 diciembre, 2020", "comment": "excelente servicio personas responsables lo seguire usando siempre que pueda. la mejor opción si tienes una emergencia o si quieres resguardar tus ahorros." },
+                { "username": "Robert Garcia", "datetime": "4 diciembre, 2020", "comment": "Es facil y por simples pasos tus familiares pueden ir a retirarlos sin problemas!" }
+            ],
+            "imagePrimary": "https://d13lnhwm7sh4hi.cloudfront.net/wp-content/uploads/2020/12/01154754/7591002700058-pepitonas-margarita-140-gr-01.jpg",
+            "othersImages": []
+        },
+        {
+            "id": 7,
+            "title": "Teclado Flexible USB Rojo – IME-2462", 
+            "priceUSD": 2,
+            "priceBS": 2800000,
+            "category": "Tecnología",
+            "subcategory": "Accesorios",
+            "in_stock": 2,
+            "description": "",
+            "sku": "109102026",
+            "stars": 1.5,
+            "comments": [
+                { "username": "Alejandro Ortiz", "datetime": "20 noviembre, 2020", "comment": "Ahora mi esposa recibirá dolares en efectivo en venezuela." },
+                { "username": "Nersa Torres", "datetime": "24 noviembre, 2020", "comment": "Anteriormente enviaba dinero a mi familia a través de una casa de cambio, pero les llegaba Bolivares, a los días ya eso era nada, con este producto ya es totalmente distinto. Muchas gracias" },
+                { "username": "rodrigjennifer", "datetime": "2 diciembre, 2020", "comment": "excelente servicio personas responsables lo seguire usando siempre que pueda. la mejor opción si tienes una emergencia o si quieres resguardar tus ahorros." },
+                { "username": "Robert Garcia", "datetime": "4 diciembre, 2020", "comment": "Es facil y por simples pasos tus familiares pueden ir a retirarlos sin problemas!" }
+            ],
+            "imagePrimary": "https://d13lnhwm7sh4hi.cloudfront.net/wp-content/uploads/2019/10/18170258/ime-24629sp-teclado-flexible-usb-rojo-1.jpg",
+            "othersImages": ["https://d13lnhwm7sh4hi.cloudfront.net/wp-content/uploads/2019/10/18170300/ime-24629sp-teclado-flexible-usb-rojo-2.jpg"]
+        },
+        {
+            "id": 8,
+            "title": "Ventilador Para CPU Inter 775 – IME", 
+            "priceUSD": 2,
+            "priceBS": 2800000,
+            "category": "Tecnología",
+            "subcategory": "Accesorios",
+            "in_stock": 6,
+            "description": "",
+            "sku": "109102026",
+            "stars": 1.5,
+            "comments": [
+                { "username": "Alejandro Ortiz", "datetime": "20 noviembre, 2020", "comment": "Ahora mi esposa recibirá dolares en efectivo en venezuela." },
+                { "username": "Nersa Torres", "datetime": "24 noviembre, 2020", "comment": "Anteriormente enviaba dinero a mi familia a través de una casa de cambio, pero les llegaba Bolivares, a los días ya eso era nada, con este producto ya es totalmente distinto. Muchas gracias" },
+                { "username": "rodrigjennifer", "datetime": "2 diciembre, 2020", "comment": "excelente servicio personas responsables lo seguire usando siempre que pueda. la mejor opción si tienes una emergencia o si quieres resguardar tus ahorros." },
+                { "username": "Robert Garcia", "datetime": "4 diciembre, 2020", "comment": "Es facil y por simples pasos tus familiares pueden ir a retirarlos sin problemas!" }
+            ],
+            "imagePrimary": "https://d13lnhwm7sh4hi.cloudfront.net/wp-content/uploads/2019/10/18165957/ime-20613-ventilador-cpu-intel-775-1.jpg",
+            "othersImages": ["https://d13lnhwm7sh4hi.cloudfront.net/wp-content/uploads/2019/10/18170001/ime-20613-ventilador-cpu-intel-775-2-600x600.jpg"]
+        },
+        {
+            "id": 9,
+            "title": "Forros Celulares Clasicos", 
+            "priceUSD": 5,
+            "priceBS": 2800000,
+            "category": "Tecnología",
+            "subcategory": "Accesorios",
+            "in_stock": 6,
+            "description": "",
+            "sku": "109102026",
+            "stars": 1.5,
+            "comments": [
+                { "username": "Alejandro Ortiz", "datetime": "20 noviembre, 2020", "comment": "Ahora mi esposa recibirá dolares en efectivo en venezuela." },
+                { "username": "Nersa Torres", "datetime": "24 noviembre, 2020", "comment": "Anteriormente enviaba dinero a mi familia a través de una casa de cambio, pero les llegaba Bolivares, a los días ya eso era nada, con este producto ya es totalmente distinto. Muchas gracias" },
+                { "username": "rodrigjennifer", "datetime": "2 diciembre, 2020", "comment": "excelente servicio personas responsables lo seguire usando siempre que pueda. la mejor opción si tienes una emergencia o si quieres resguardar tus ahorros." },
+                { "username": "Robert Garcia", "datetime": "4 diciembre, 2020", "comment": "Es facil y por simples pasos tus familiares pueden ir a retirarlos sin problemas!" }
+            ],
+            "imagePrimary": "https://d13lnhwm7sh4hi.cloudfront.net/wp-content/uploads/2020/12/09142227/214101001-a-forros-celulares-clasicos-01.jpg",
+            "othersImages": []
+        }
+    ],
+    "users": [
+        {
+            "username": "compralotodo",
+            "password": "Compralotodo"
+        }
+    ],
+    "information-web-site": {
+        "social": [
+            { "name": "instagram", "url": "" }
+        ]
     }
-  ],
-
-  "products": [
-    {
-      "title": "",
-      "image": "",
-      "description": "",
-      "stars": 4.5,
-      "price": 30,
-      "in_stock": 4
-    }
-  ],
-
-  "for_you": [
-    {
-      "id": 1,
-      "title": "3 pack Ron Añejo Cacique",
-      "image": "",
-      "description": "",
-      "stars": 4.5,
-      "price": 30,
-      "in_stock": 4
-    },
-    {
-      "id": 2,
-      "title": "",
-      "image": "",
-      "description": "",
-      "stars": 4.5,
-      "price": 30,
-      "in_stock": 4
-    },
-    {
-      "id": 3,
-      "title": "",
-      "image": "",
-      "description": "",
-      "stars": 4.5,
-      "price": 30,
-      "in_stock": 4
-    },
-    {
-      "id": 4,
-      "title": "",
-      "image": "",
-      "description": "",
-      "stars": 4.5,
-      "price": 30,
-      "in_stock": 4
-    },
-    {
-      "id": 5,
-      "title": "",
-      "image": "",
-      "description": "",
-      "stars": 4.5,
-      "price": 30,
-      "in_stock": 4
-    }
-  ],
-  "audio": [
-    {
-      "id": 1,
-      "title": "",
-      "image": "",
-      "description": "",
-      "stars": 4.5,
-      "price": 30,
-      "in_stock": 4
-    }
-  ]
 }

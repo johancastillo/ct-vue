@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from 'react'
 import { Link } from 'wouter'
 import UserContext from '../context/User/UserContext'
 import Menu from './Menu'
+import logo from "../images/logo.svg"
 
 
 const Header = () => {
@@ -40,7 +41,7 @@ const Header = () => {
                                         {/* Logo */}
                                         <Link to="/">
                                             <a className="order-1 order-xl-0 navbar-brand u-header__navbar-brand u-header__navbar-brand-center" aria-label="Electro">
-                                                <img src="./assets/img/logo.svg" alt="" />
+                                                <img src={logo} alt="" />
                                             </a>
                                         </Link>
                                         {/* End Logo */}
